@@ -1,0 +1,141 @@
+.hex__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 2rem;
+}
+
+.hex__navbar-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.hex__navbar-links_logo {
+    margin-right: 0rem;
+}
+
+.hex__navbar-links_logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.hex__navbar-links_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.hex__navbar-sign {
+    font-family: "Georgia";
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hex__navbar-links_container p,
+.hex__navbar-sign p,
+.hex__navbar-menu_container-links p,
+.hex__navbar-menu_conainer p {
+    color: #fff;
+    font-family: var(--font-familiy);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.hex__navbar-sign button,
+.hex__navbar-menu_conainer button,
+.hex__navbar-menu_container-links-sign button {
+    padding: 0.5rem 1rem;
+    color: purple;
+    background: yellow;
+    font-family: var(--font-familiy);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    left: 1153px;
+    top: 55px;
+
+    border-radius: 5px;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+}
+
+.hex__navbar-menu {
+    margin-left: 1rem;
+
+    display: none;
+    position: relative;
+}
+
+.hex__navbar-menu svg {
+    cursor: pointer;
+}
+
+.hex__navbar-menu_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+
+    text-align: end;
+    background: var(--color-footer);
+    padding: 2rem;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    margin-top: 1rem;
+    min-width: 210px;
+    border-radius: 5px;
+    box-shadow: 0 0 5 rgba(0,0,0,0.2);
+}
+
+.hex__navbar-menu_container p {
+    margin: 1rem 0;
+}
+
+.hex__navbar-menu_conainer-links-sign {
+    display: none;
+}
+
+@media screen and (max-width: 1050px) {
+    .hex__navbar-links_container {
+        display: none;
+    }
+
+    .hex__navbar-menu {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .hex__navbar {
+        padding: 2rem 4rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .hex__navbar {
+        padding: 2rem;
+    }
+
+    .hex__navbar-sign {
+        display: none;
+    }
+
+    .hex__navbar-menu_conainer {
+        top: 20px;
+    }
+
+    .hex__navbar-menu_conainer-links-sign {
+        display: block;
+    }
+}

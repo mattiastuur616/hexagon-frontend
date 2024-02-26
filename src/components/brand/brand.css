@@ -1,0 +1,38 @@
+.hex__brand {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.hex__brand div {
+    flex: 1;
+    max-width: 150px;
+    min-width: 120px;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    margin-top: 5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hex__brand img {
+    width: 256px;
+    height: 192px;
+}
+
+.hex__footer-copyright {
+    margin-top: 2rem;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 7rem;
+}
+
+.hex__footer-copyright p {
+    font-size: 12px;
+    font-family: var(--font-family);
+    line-height: 15px;
+    color: #fff;
+}
