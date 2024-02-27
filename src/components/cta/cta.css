@@ -33,7 +33,7 @@
     margin-left: 2rem;
 }
 
-.hex__cta-btn button {
+.hex__cta-btn button, .hex__cta-link {
     background: #000;
     color: #fff;
     font-family: var(--font-family);
@@ -43,6 +43,7 @@
     padding: 0.5rem 1rem;
     border-radius: 2rem;
     margin: 10px;
+    text-align: center;
 
     border: none;
     outline: none;

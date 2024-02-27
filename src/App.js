@@ -1,27 +1,14 @@
-import './App.css';
-import { Footer, Library, WhatHex, Header } from './containers'
-import { Brand, Navbar } from './components'
-import background from './assets/HexRings.png'
+//import './App.css';
+import { Routes, Route } from 'react-router-dom'
+import MainPage from './components/MainPage';
+import LibraryPage from './components/LibraryPage';
 
 function App() {
   return (
-    <div className="App">
-      <div className='gradient__bg'>
-        <Navbar />
-        <Header />
-      </div>
-      <div style={{backgroundImage: `url(${background})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: 1520
-        }}>
-        <WhatHex />
-      </div>
-      <div className='gradient__books'>
-        <Library />
-      </div>
-      <Footer />
-      <Brand />
-    </div>
+    <Routes>
+      <Route path='/' element={<MainPage />} />
+      <Route path='library' element={<LibraryPage />} />
+    </Routes>
   );
 }
 
