@@ -7,8 +7,7 @@ const Menu = () => {
   return (
     <>
     <p><a href='#welcome'>Welcome</a></p>
-    <p><a href='#whex'>The Hex</a></p>
-    <p><a href='#books'>Books</a></p>
+    <p><a href='#whex'>The Hex and Books</a></p>
     <p><a href='#aboutUs'>About Us</a></p>
     </>
   )
