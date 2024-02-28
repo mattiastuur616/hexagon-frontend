@@ -1,12 +1,12 @@
 import React from 'react'
 import { Library } from '../containers'
-import BackButton from './BackButton'
+import LibraryNav from './backButton/LibraryNav'
 
 const LibraryPage = () => {
   return (
     <div>
         <div>
-            <BackButton />
+            <LibraryNav />
         </div>
         <div className='gradient__books'>
             <Library />

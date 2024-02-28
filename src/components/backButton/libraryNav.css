@@ -1,39 +1,23 @@
-.hex__cta {
+.hex__libraryNav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-
-    padding: 2rem;
-    margin: 4rem;
-    border-radius: 1rem;
     background: var(--gradient-bar);
 }
 
-.hex__cta-content p {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 30px;
-    color: #0E0E0E;
+.hex__libraryNav-btn img {
+    width: 100px;
+    height: 100px;
+    margin-top: 25px;
 }
 
-.hex__cta-content h3 {
-    font-family: var(--font-family);
-    font-size: 24px;
-    line-height: 45px;
-    font-weight: 800;
-    color: greenyellow;
-}
-
-.hex__cta-btn {
+.hex__libraryNav-btn {
     display: flex;
-    justify-content: center;
-    align-items: center;
     margin-left: 2rem;
 }
 
-.hex__cta-btn button, .hex__cta-link {
+.hex__libraryNav-btn button, .hex__libraryNav-link {
     background: #fff700;
     color: #8d00eb;
     font-family: var(--font-family);
@@ -42,8 +26,11 @@
     line-height: 30px;
     padding: 0.5rem 1rem;
     border-radius: 2rem;
-    margin: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 25px;
     text-align: center;
+    align-items: center;
 
     border: none;
     outline: none;
@@ -52,27 +39,22 @@
 }
 
 @media screen and (max-width: 650px) {
-    .hex__cta {
+    .hex__libraryNav {
         flex-direction: column;
     }
 
-    .hex__cta-btn {
+    .hex__libraryNav-btn {
         margin: 2rem 0 0;
     }
 }
 
 @media screen and (max-width: 550px) {
-    .hex__cta {
+    .hex__libraryNav {
         flex-direction: column;
         margin: 4rem 2rem;
     }
 
-    .hex__cta-content h3 {
-        font-size: 18px;
-        line-height: 32px;
-    }
-
-    .hex__cta-btn button {
+    .hex__libraryNav-btn button {
         font-size: 14px;
         line-height: 28px;
     }
