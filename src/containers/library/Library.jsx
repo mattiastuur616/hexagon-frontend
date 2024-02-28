@@ -11,7 +11,7 @@ const Library = () => {
       </div>
       <div className='hex__blog-container'>
         <div className='hex__blog-container_group'>
-          <Book imgUrl={chapter1} chapter="Chapter 1" co title="The Protector of The Realm" />
+          <Book imgUrl={chapter1} chapter="Chapter 1" title="The Protector of The Realm" />
           <Book imgUrl={chapter2} chapter="Chapter 2" title="Between The Unreal" />
           <Book imgUrl={chapter3} chapter="Chapter 3" title="The World of Tomorrow" />
           <Book imgUrl={chapter4} chapter="Chapter 4" title="No Time to Sleep" />
