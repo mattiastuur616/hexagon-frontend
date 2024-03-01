@@ -1,16 +1,16 @@
-.hex__blog {
+.hex__library {
     display: flex;
     flex-direction: column;
 }
 
-.hex__blog-heading {
+.hex__library-heading {
     width: 100%;
     text-align: left;
 
     margin-bottom: 5rem;
 }
 
-.hex__blog-heading h1 {
+.hex__library-heading h1 {
     font-size: 62px;
     line-height: 75px;
     font-family: var(--font-family);
@@ -18,12 +18,13 @@
     text-align: center;
 }
 
-.hex__blog-container {
+.hex__library-container {
     display: flex;
     flex-direction: row;
+    margin-bottom: 1rem;
 }
 
-.hex__blog-container_group {
+.hex__library-container_group {
     flex: 1;
 
     display: grid;
@@ -32,41 +33,31 @@
 }
 
 @media screen and (max-width: 990px) {
-    .hex__blog-container {
+    .hex__library-container {
         flex-direction: column-reverse;
     }
 
-
-    .hex__blog-container_groupA {
+    .hex__library-container_group {
         margin: 2rem 0;
-    }
-
-    .hex__blog-container_groupA .hex__blog-container_article  {
-       width: 48%;
-    }
-
-    .hex__blog-container_groupA .hex__blog-container_article-image {
+        width: 48%;
         height: 250px;
     }
 }
 
 @media screen and (max-width: 700px) {
-    .hex__blog-container_groupB {
+    .hex__library-container_group {
         grid-template-columns: repeat(1, 1fr);
+        width: 100%;
     }
 
-    .hex__blog-container_groupA .hex__blog-container_article  {
-       width: 100%;
-    }
-
-    .hex__blog-heading h1 {
+    .hex__library-heading h1 {
         font-size: 46px;
         line-height: 52px;
     }
 }
 
 @media screen and (max-width: 550px) {
-    .hex__blog-heading h1 {
+    .hex__library-heading h1 {
         font-size: 34px;
         line-height: 42px;
     }
