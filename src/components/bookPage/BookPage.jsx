@@ -1,25 +1,57 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import hexLogo from '../../assets/HexLogo.png'
+import axios from 'axios'
 import './bookPage.css'
 
-const BookPage = (title, source) => {
-  let pageNumber = 0;
-  source = `/chapters/${localStorage.getItem("chapter")}/${pageNumber}.txt`;
+const BookPage = (title) => {
   title = localStorage.getItem("title");
   const navigate = useNavigate()
+  const [pageNumber, setPageNumber] = useState(0);
+
   function moveToLibrary() {
     localStorage.removeItem("title");
     localStorage.removeItem("chapter")
     window.scrollTo({ top: 0, behavior: "smooth" });
     navigate("/library");
   }
-  function goOn() {
-    pageNumber = pageNumber + 1;
+
+  function ShowContent() {
+    const [content, setContent] = useState("");
+
+    React.useEffect(() => {
+        axios.get(`http://localhost:8080/api/content/chapter${localStorage.getItem("chapter")}/${pageNumber}`)
+        .then(res => {
+            setContent(res.data);
+        }).catch(error => {
+          console.log(error)
+        });
+    }, []);
+
+    return (
+        <div>
+          <p>{content}</p>
+        </div>
+    )
   }
-  function goBack() {
-    pageNumber = pageNumber - 1;
+
+  function RenderButtons() {
+    if (pageNumber === 0) {
+      return (
+        <div className='hex__bookPage-pageChange'>
+          <button className='hex__bookPage-btn' type='button' onClick={() => setPageNumber(pageNumber + 1)}>Go On</button>
+        </div>
+      )
+    } else {
+      return (
+        <div className='hex__bookPage-pageChange'>
+          <button className='hex__bookPage-btn' type='button' onClick={() => setPageNumber(pageNumber - 1)}>Go Back</button>
+          <button className='hex__bookPage-btn' type='button' onClick={() => setPageNumber(pageNumber + 1)}>Go On</button>
+        </div>
+      )
+    }
   }
+
   return (
     <div>
       <div className='hex__bookPage'>
@@ -33,12 +65,9 @@ const BookPage = (title, source) => {
           <h1 className='gradient__text'>Hexagon: {title}</h1>
         </div>
         <div className='hex__bookPage-page'>
-          <p>{pageNumber}</p>
+          <ShowContent />
         </div>
-        <div className='hex__bookPage-pageChange'>
-          <button className='hex__bookPage-btn' type='button' onClick={goBack}>Go Back</button>
-          <button className='hex__bookPage-btn' type='button' onClick={goOn}>Go On</button>
-        </div>
+        <RenderButtons />
       </div>
     </div>
   )

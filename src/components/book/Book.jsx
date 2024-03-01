@@ -4,12 +4,14 @@ import './book.css'
 
 const Book = ({ imgUrl, chapter, title }) => {
   const navigate = useNavigate()
+
   function moveToBook() {
     localStorage.setItem("title", title);
     localStorage.setItem("chapter", chapter);
     window.scrollTo({ top: 0, behavior: "smooth" });
     navigate("/book");
   }
+  
   return (
     <div className='hex__book-container_book'>
       <div className='hex__book-container_book-image'>
@@ -17,7 +19,7 @@ const Book = ({ imgUrl, chapter, title }) => {
       </div>
       <div className='hex__book-container_book-content'>
         <div>
-          <p>{chapter}</p>
+          <p>Chapter {chapter}</p>
           <h1>{title}</h1>
         </div>
         <div>

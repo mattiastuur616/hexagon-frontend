@@ -1,6 +1,6 @@
 import React from 'react'
 import { Library } from '../containers'
-import LibraryNav from './backButton/LibraryNav'
+import LibraryNav from './libraryNav/LibraryNav'
 
 const LibraryPage = () => {
   return (
