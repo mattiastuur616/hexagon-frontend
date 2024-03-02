@@ -59,12 +59,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
 
-    padding-bottom: 5cm;
+    padding-bottom: 2cm;
     margin-left: 22rem;
     margin-right: 22rem;
-    background: white;
+    background: palegoldenrod;
+}
+
+.hex__bookPage-pageNumber {
+    text-align: center;
 }
 
 .hex__bookPage-pageChange {
@@ -74,7 +78,9 @@
 }
 
 .hex__bookPage-page p {
-    margin: 4rem;
+    margin-top: 4rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
 }
 
 @media screen and (max-width: 650px) {

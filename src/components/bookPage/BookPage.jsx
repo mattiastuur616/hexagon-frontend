@@ -66,6 +66,7 @@ const BookPage = (title) => {
         </div>
         <div className='hex__bookPage-page'>
           <ShowContent />
+          <p className='hex__bookPage-pageNumber'>{pageNumber}</p>
         </div>
         <RenderButtons />
       </div>
