@@ -18,7 +18,7 @@ const Footer = () => {
         </div>
         <div className='hex__profile'>
           <img src={mystery} alt='mainHex' />
-          <h1>???? ???????</h1>
+          <h1>Sten Muinast</h1>
           <p>Story Writer</p>
         </div>
       </div>

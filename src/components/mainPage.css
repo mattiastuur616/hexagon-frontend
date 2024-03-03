@@ -24,6 +24,11 @@ a {
     background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgb(211, 24, 3) 100%);
 }
 
+.gradient__store {
+    /* global 94%+ browsers support */
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(18, 255, 0, 1) 100%);
+  }
+
 .gradient__text {
     background:var(--gradient-text);
     background-clip: text;

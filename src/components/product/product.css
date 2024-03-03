@@ -1,4 +1,4 @@
-.hex__book-container_book {
+.hex__product-container_book {
     width: 100%;
     height: 100%;
 
@@ -7,18 +7,18 @@
     background: var(--color-footer);
 }
 
-.hex__book-container_book-image {
+.hex__product-container_book-image {
     width: 100%;
     height: 100%;
     background: var(--color-footer);
 }
 
-.hex__book-container_book-image img {
+.hex__product-container_book-image img {
     width: 100%;
     height: 100%;
 }
 
-.hex__book-container_book-content {
+.hex__product-container_book-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -29,20 +29,31 @@
     font-family: var(--font-family);
 }
 
-.hex__book-container_book-content p {
+.hex__product-container_book-content p {
     font-family: var(--font-family);
     font-size: 15px;
     font-weight: 700;
-    line-height: 35px;
+    margin-top: 15px;
+    line-height: 25px;
 
-    color: #ffe600;
+    color: #2fff00;
 }
 
-.hex__book-container_book-content h1 {
+.hex__product-container_book-content h1 {
     color: aqua;
 }
 
-.hex__book-container_book-content button {
+.hex__product-container_book-prize {
+    display: flex;
+    flex-direction: row;
+}
+
+.hex__product-container_book-prize-value {
+    padding-top: 10px;
+    padding-left: 40px;
+}
+
+.hex__product-container_book-content button {
     background: rgb(156, 69, 156);
     color: rgb(221, 221, 1);
     font-family: var(--font-family);
@@ -60,8 +71,4 @@
     outline: none;
     cursor: pointer;
     min-width: 150px;
-}
-
-.hex__book-container_book-content p:last-child {
-    cursor: pointer;
 }

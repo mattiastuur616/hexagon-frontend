@@ -1,5 +1,5 @@
 import React from 'react'
-import { Book, Brand } from '../../components'
+import { Book } from '../../components'
 import { chapter1, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8, chapter9 } from './imports'
 import './library.css'
 
@@ -21,9 +21,6 @@ const Library = () => {
           <Book imgUrl={chapter8} chapter="8" title="Timelines of The Parasyte" />
           <Book imgUrl={chapter9} chapter="9" title="The Death Congress" />
         </div>
-      </div>
-      <div className='hex__library-brand'>
-        <Brand />
       </div>
     </div>
   )

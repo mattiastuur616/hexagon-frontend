@@ -4,10 +4,17 @@ import './cta.css'
 
 const CTA = () => {
   const navigate = useNavigate()
+
   function moveToLibrary() {
     window.scrollTo({ top: 0, behavior: "smooth" });
     navigate("library");
   }
+
+  function moveToStore() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    navigate("store");
+  }
+
   return (
     <div className="hex__cta">
       <div className="hex__cta-content">
@@ -15,7 +22,7 @@ const CTA = () => {
       </div>
       <div className="hex__cta-btn">
         <button type="button" onClick={moveToLibrary}>Go to books</button>
-        <button type="button">Purchase the books</button>
+        <button type="button" onClick={moveToStore}>Purchase the books</button>
       </div>
     </div>
   )
