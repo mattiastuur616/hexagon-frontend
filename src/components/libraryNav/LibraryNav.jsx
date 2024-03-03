@@ -8,8 +8,8 @@ const LibraryNav = () => {
     <div className='hex__libraryNav'>
       <div className="hex__libraryNav-btn">
         <img src={hexLogo} alt='hexLogo'/>
-        <Link className='hex__libraryNav-link' to="/">Go back</Link>
-        <button type="button">Buy the books</button>
+        <Link className='hex__libraryNav-link' to="/">Go back to Main Page</Link>
+        <Link className='hex__libraryNav-link' to="/store">Go to store</Link>
       </div>
     </div>
   )

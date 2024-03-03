@@ -36,6 +36,7 @@
 .hex__profile p {
     padding-top: 2rem;
     text-align: center;
+    font-size: 20px;
     color: greenyellow;
 }
 
