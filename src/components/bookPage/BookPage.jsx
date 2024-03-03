@@ -17,7 +17,7 @@ const BookPage = (title) => {
   }
 
   function ShowContent() {
-    const [content, setContent] = useState("");
+    const [content, setContent] = useState([]);
 
     React.useEffect(() => {
         axios.get(`http://localhost:8080/api/content/chapter${localStorage.getItem("chapter")}/${pageNumber}`)
@@ -28,9 +28,21 @@ const BookPage = (title) => {
         });
     }, []);
 
+    const dividedParts = content.map((paragraph) => {
+      if (paragraph.includes("Chapter")) {
+        return (
+        <h1>{paragraph}</h1>
+        )
+      } else {
+        return (
+        <p>{paragraph}</p>
+        )
+      }
+    })
+
     return (
         <div>
-          <p>{content}</p>
+          {dividedParts}
         </div>
     )
   }
