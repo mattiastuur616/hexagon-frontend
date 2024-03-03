@@ -61,7 +61,7 @@
     align-items: center;
     flex-direction: column;
 
-    padding-bottom: 2cm;
+    padding-bottom: 1cm;
     margin-left: 22rem;
     margin-right: 22rem;
     background: palegoldenrod;
@@ -78,9 +78,20 @@
 }
 
 .hex__bookPage-page p {
+    margin-top: 2rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.hex__bookPage-page h1 {
     margin-top: 4rem;
     margin-left: 4rem;
     margin-right: 4rem;
+    color: brown;
+}
+
+.hex__bookPage-page p:first-child {
+    margin-top: 4rem;
 }
 
 @media screen and (max-width: 650px) {
