@@ -1,7 +1,7 @@
 import React from 'react'
-import { Library } from '../containers'
-import LibraryNav from './libraryNav/LibraryNav'
-import Brand from './brand/Brand'
+import { Library } from '../../containers'
+import LibraryNav from '../libraryNav/LibraryNav'
+import Brand from '../brand/Brand'
 
 const LibraryPage = () => {
   return (

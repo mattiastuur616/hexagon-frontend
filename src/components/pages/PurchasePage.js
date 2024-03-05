@@ -1,7 +1,7 @@
 import React from 'react'
-import { Store } from '../containers'
-import StoreNav from './storeNav/StoreNav'
-import Brand from './brand/Brand'
+import { Store } from '../../containers'
+import StoreNav from '../storeNav/StoreNav'
+import Brand from '../brand/Brand'
 
 const PurchasePage = () => {
   return (

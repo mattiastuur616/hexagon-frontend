@@ -1,0 +1,40 @@
+.hex__sign-up-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 2rem;
+}
+
+.hex__sign-up-navbar-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.hex__sign-up-navbar-sign button {
+    padding: 0.5rem 1rem;
+    color: purple;
+    background: yellow;
+    font-family: var(--font-familiy);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    left: 1153px;
+    top: 55px;
+    margin-left: 3rem;
+
+    border-radius: 5px;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+}
+
+.hex__sign-up-navbar-header h1 {
+    color: rgb(178, 0, 178);
+    padding-left: 14rem;
+    font-size: 50px;
+}

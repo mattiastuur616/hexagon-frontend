@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
+import { useNavigate } from 'react-router-dom'
 import './navbar.css'
 import hexLogo from '../../assets/HexLogo.png'
 
@@ -14,7 +15,14 @@ const Menu = () => {
 }
 
 const Navbar = () => {
+  const navigate = useNavigate()
+
   const [toggleMenu, setToggleMenu] = useState(false);
+
+  function moveToSignUp() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    navigate("signup");
+  }
 
   return (
     <div className="hex__navbar">
@@ -28,7 +36,7 @@ const Navbar = () => {
       </div>
       <div className='hex__navbar-sign'>
         <p>Sign in</p>
-        <button type='button'>Sing up</button>
+        <button type='button' onClick={moveToSignUp}>Sing up</button>
       </div>
       <div className='hex__navbar-menu'>
         {toggleMenu

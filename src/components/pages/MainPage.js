@@ -1,8 +1,8 @@
 import React from 'react'
 import './mainPage.css';
-import { Footer, WhatHex, Header } from '../containers'
-import { Brand, Navbar } from '../components'
-import background from '../assets/HexRings.png'
+import { Footer, WhatHex, Header } from '../../containers'
+import { Brand, Navbar } from '..'
+import background from '../../assets/HexRings.png'
 
 const MainPage = () => {
   return (
