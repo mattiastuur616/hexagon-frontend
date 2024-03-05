@@ -57,8 +57,8 @@ const SignUpForm = () => {
                     <p>Your email address:</p>
                     <input type="text" name='email' placeholder='Email' value={data.email} onChange={handleChange} />
                 </label>
-                <div className='hex__sign-up_text'>
-                    <p>Password must include at least one upper letter and be at least 18 digits long</p>
+                <div>
+                    <p className='hex__sign-up_text'>Password must include at least one upper letter and be at least 18 digits long</p>
                 </div>
                 <label className='hex__sign-up_form-label'>
                     <p>Enter a password:</p>
