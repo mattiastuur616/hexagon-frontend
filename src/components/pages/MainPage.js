@@ -3,6 +3,7 @@ import './mainPage.css';
 import { Footer, WhatHex, Header } from '../../containers'
 import { Brand, Navbar } from '..'
 import background from '../../assets/HexRings.png'
+import LoggedInNav from '../loggedInNav/LoggedInNav';
 
 const MainPage = () => {
 
@@ -11,7 +12,7 @@ const MainPage = () => {
       return (
         <div className="App">
           <div className='gradient__bg'>
-            <Navbar />
+            <LoggedInNav />
             <Header />
           </div>
           <div style={{backgroundImage: `url(${background})`,
@@ -29,7 +30,6 @@ const MainPage = () => {
     } else {
       return (
         <div className="App">
-          <h1>Testing Testing Testing</h1>
           <div className='gradient__bg'>
             <Navbar />
             <Header />

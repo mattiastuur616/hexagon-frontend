@@ -9,6 +9,37 @@ const BookPage = (title) => {
   const navigate = useNavigate()
   const [pageNumber, setPageNumber] = useState(0);
 
+  function CheckStatus() {
+    if (localStorage.getItem("user") !== null) {
+      return (
+        <div>
+          <div className='hex__bookPage'>
+            <div className="hex__bookPage-nav">
+                <img src={hexLogo} alt='hexLogo'/>
+                <button className='hex__bookPage-btn' type='button' onClick={moveToLibrary}>Go back to all Books</button>
+            </div>
+          </div>
+          <div className='gradient__bg'>
+            <div className='hex__bookPage-heading'>
+              <h1 className='gradient__text'>Hexagon: {title}</h1>
+            </div>
+            <div className='hex__bookPage-page'>
+              <ShowContent />
+              <p className='hex__bookPage-pageNumber'>{pageNumber}</p>
+            </div>
+            <RenderButtons />
+          </div>
+        </div>
+      )
+    } else {
+      return (
+        <div className='hex__sign-up-navbar-header'>
+          <h1>No access, user has not logged in</h1>
+        </div>
+      )
+    }
+  }
+
   function moveToLibrary() {
     localStorage.removeItem("title");
     localStorage.removeItem("chapter")
@@ -66,22 +97,7 @@ const BookPage = (title) => {
 
   return (
     <div>
-      <div className='hex__bookPage'>
-        <div className="hex__bookPage-nav">
-            <img src={hexLogo} alt='hexLogo'/>
-            <button className='hex__bookPage-btn' type='button' onClick={moveToLibrary}>Go back to all Books</button>
-        </div>
-      </div>
-      <div className='gradient__bg'>
-        <div className='hex__bookPage-heading'>
-          <h1 className='gradient__text'>Hexagon: {title}</h1>
-        </div>
-        <div className='hex__bookPage-page'>
-          <ShowContent />
-          <p className='hex__bookPage-pageNumber'>{pageNumber}</p>
-        </div>
-        <RenderButtons />
-      </div>
+      <CheckStatus />
     </div>
   )
 }

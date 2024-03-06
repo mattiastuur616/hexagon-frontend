@@ -4,17 +4,34 @@ import LibraryNav from '../libraryNav/LibraryNav'
 import Brand from '../brand/Brand'
 
 const LibraryPage = () => {
+
+  function CheckStatus() {
+    if (localStorage.getItem("user") !== null) {
+      return (
+        <div>
+          <div>
+            <LibraryNav />
+          </div>
+          <div className='gradient__books'>
+            <Library />
+          </div>
+          <div>
+            <Brand />
+          </div>
+        </div>
+      )
+    } else {
+      return (
+        <div className='hex__sign-up-navbar-header'>
+          <h1>No access, user has not logged in</h1>
+        </div>
+      )
+    }
+  }
+
   return (
     <div>
-        <div>
-          <LibraryNav />
-        </div>
-        <div className='gradient__books'>
-          <Library />
-        </div>
-        <div>
-          <Brand />
-        </div>
+        <CheckStatus />
     </div>
   )
 }

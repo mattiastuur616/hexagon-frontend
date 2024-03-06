@@ -17,6 +17,7 @@ const Menu = () => {
 
 const Navbar = () => {
   const [data, setData] = useState({
+    username: "",
     email: "",
     password: ""
   });
