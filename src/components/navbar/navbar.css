@@ -97,6 +97,36 @@
     box-shadow: 0 0 5 rgba(0,0,0,0.2);
 }
 
+.hex__sign-up_container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 2rem;
+    margin-top: 20rem;
+    background: var(--color-footer);
+    border-radius: 3rem;
+}
+
+.hex__sign-up_container-comp {
+    margin-bottom: 1rem;
+}
+
+.hex__sign-up_container-comp p {
+    color: yellow;
+}
+
+.hex__sign-up_container-comp input {
+    border-style: ridge;
+    border-width: 5px;
+    height: 2rem;
+    border-radius: 1rem;
+    border-color: purple;
+}
+
+.hex__sign-up_container-comp:last-child {
+    margin-bottom: 0rem;
+}
+
 .hex__navbar-menu_container p {
     margin: 1rem 0;
 }

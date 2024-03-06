@@ -1,8 +1,9 @@
 import { Routes, Route } from 'react-router-dom'
-import MainPage from './components/MainPage';
-import LibraryPage from './components/LibraryPage';
-import BookPage from './components/bookPage/BookPage';
-import PurchasePage from './components/PurchasePage';
+import MainPage from './components/pages/MainPage';
+import LibraryPage from './components/pages/LibraryPage';
+import BookPage from './containers/bookPage/BookPage';
+import PurchasePage from './components/pages/PurchasePage';
+import SignUp from './components/pages/SignUp';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Route path='library' element={<LibraryPage />} />
       <Route path='store' element={<PurchasePage />} />
       <Route path='book' element={<BookPage />} />
+      <Route path='signup' element={<SignUp />} />
     </Routes>
   );
 }
