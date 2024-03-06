@@ -43,6 +43,8 @@ const Navbar = () => {
       if (res.data === true) {
         localStorage.setItem("user", data.email);
         window.location.reload(false);
+      } else {
+        alert("Wrong email or password")
       }
     })
   }
