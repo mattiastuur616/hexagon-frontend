@@ -4,6 +4,7 @@ import LibraryPage from './components/pages/LibraryPage';
 import BookPage from './containers/bookPage/BookPage';
 import PurchasePage from './components/pages/PurchasePage';
 import SignUp from './components/pages/SignUp';
+import StripeContainer from './components/payment/StripeContainer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route path='store' element={<PurchasePage />} />
       <Route path='book' element={<BookPage />} />
       <Route path='signup' element={<SignUp />} />
+      <Route path='payment' element={<StripeContainer />} />
     </Routes>
   );
 }

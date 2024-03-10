@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 import './book.css'
 
 const Book = ({ imgUrl, chapter, title }) => {
@@ -10,6 +11,33 @@ const Book = ({ imgUrl, chapter, title }) => {
     localStorage.setItem("chapter", chapter);
     window.scrollTo({ top: 0, behavior: "smooth" });
     navigate("/book");
+  }
+
+  function ShowOptions() {
+    const [purchased, setPurchased] = useState(false);
+
+    React.useEffect(() => {
+      axios.get(`http://localhost:8080/api/isPurchased?email=${localStorage.getItem("user")}&chapter=${chapter}`)
+      .then(res => {
+        setPurchased(res.data)
+      }).catch(error => {
+        console.log(error)
+      })
+    })
+
+    if (purchased === true) {
+      return (
+        <div>
+          <button type='button' onClick={moveToBook}>Open The Book</button>
+        </div>
+      )
+    } else {
+      return (
+        <div>
+          <p>Go to store and buy the book</p>
+        </div>
+      )
+    }
   }
   
   return (
@@ -22,9 +50,7 @@ const Book = ({ imgUrl, chapter, title }) => {
           <p>Chapter {chapter}</p>
           <h1>{title}</h1>
         </div>
-        <div>
-          <button type='button' onClick={moveToBook}>Open The Book</button>
-        </div>
+        <ShowOptions />
       </div>
     </div>
   )
