@@ -28,7 +28,27 @@
     border-radius: 2rem;
     margin-top: 50px;
     margin-bottom: 50px;
-    margin-left: 25px;
+    margin-left: 30px;
+    text-align: center;
+    align-items: center;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+    min-width: 150px;
+}
+
+.hex__bookPage-bookMark {
+    background: #09ff00;
+    color: #1500ff;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    margin-top: 50px;
+    margin-left: 115px;
     text-align: center;
     align-items: center;
 
@@ -72,9 +92,12 @@
 }
 
 .hex__bookPage-pageChange {
-    padding-bottom: 10rem;
     align-items: center;
     margin-left: 35rem;
+}
+
+.hex__bookPage-pageChange:last-child {
+    padding-bottom: 10rem;
 }
 
 .hex__bookPage-page p {

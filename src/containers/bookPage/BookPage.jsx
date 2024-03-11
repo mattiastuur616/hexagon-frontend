@@ -7,7 +7,28 @@ import './bookPage.css'
 const BookPage = (title) => {
   title = localStorage.getItem("title");
   const navigate = useNavigate()
-  const [pageNumber, setPageNumber] = useState(0);
+  const [pageNumber, setPageNumber] = useState(FindPageNumber());
+
+  function FindPageNumber() {
+    React.useEffect(() => {
+      axios.get(`http://localhost:8080/api/pageNumber?email=${localStorage.getItem("user")}&chapter=${localStorage.getItem("chapter")}`)
+      .then(res => {
+          setPageNumber(res.data);
+      }).catch(error => {
+        console.log(error)
+      });
+    }, []);
+  }
+
+  const saveBookMark = async (e) => {
+    e.preventDefault()
+    await axios.put(`http://localhost:8080/api/bookMark?email=${localStorage.getItem("user")}&chapter=${localStorage.getItem("chapter")}&bookMark=${pageNumber}`)
+    .then(
+      alert("Bookmark was saved")
+    ).catch(error => {
+      console.log(error)
+    });
+  }
 
   function CheckStatus() {
     if (localStorage.getItem("user") !== null) {
@@ -26,6 +47,9 @@ const BookPage = (title) => {
             <div className='hex__bookPage-page'>
               <ShowContent />
               <p className='hex__bookPage-pageNumber'>{pageNumber}</p>
+            </div>
+            <div className='hex__bookPage-pageChange'>
+              <button className='hex__bookPage-bookMark' type='button' onClick={saveBookMark}>Save Bookmark</button>
             </div>
             <RenderButtons />
           </div>
