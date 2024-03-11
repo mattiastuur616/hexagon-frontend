@@ -40,34 +40,34 @@ const LoggedInNav = () => {
 
     return (
         <div className="hex__navbar">
-        <div className="hex__navbar-links">
-            <div className="hex__navbar-links_logo">
-            <img src={hexLogo} alt='hexLogo'/>
-            </div>
-            <div className='hex__navbar-links_container'>
-            <Menu />
-            </div>
-        </div>
-        <div className='hex__navbar-sign'>
-            <WhatUser />
-            <button type='button' onClick={logOut}>Log out</button>
-        </div>
-        <div className='hex__navbar-menu'>
-            {toggleMenu
-            ? <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />
-            : <RiMenu3Line color="#fff" size={27} onClick={() => setToggleMenu(true)} />
-            }
-            {toggleMenu && (
-            <div className='hex__navbar-menu_container scale-up-center'>
-                <div className='hex__navbar-menu_container-links'>
+            <div className="hex__navbar-links">
+                <div className="hex__navbar-links_logo">
+                <img src={hexLogo} alt='hexLogo'/>
+                </div>
+                <div className='hex__navbar-links_container'>
                 <Menu />
-                <div className='hex__navbar-menu_container-links-sign'>
-                    <button type='button' onClick={logOut}>Log out</button>
-                </div>
                 </div>
             </div>
-            )}
-        </div>
+            <div className='hex__navbar-sign'>
+                <WhatUser />
+                <button type='button' onClick={logOut}>Log out</button>
+            </div>
+            <div className='hex__navbar-menu'>
+                {toggleMenu
+                ? <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />
+                : <RiMenu3Line color="#fff" size={27} onClick={() => setToggleMenu(true)} />
+                }
+                {toggleMenu && (
+                <div className='hex__navbar-menu_container scale-up-center'>
+                    <div className='hex__navbar-menu_container-links'>
+                    <Menu />
+                    <div className='hex__navbar-menu_container-links-sign'>
+                        <button type='button' onClick={logOut}>Log out</button>
+                    </div>
+                    </div>
+                </div>
+                )}
+            </div>
         </div>
     )
 }

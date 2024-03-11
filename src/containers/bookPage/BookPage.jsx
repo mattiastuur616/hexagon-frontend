@@ -37,7 +37,7 @@ const BookPage = (title) => {
           <div className='hex__bookPage'>
             <div className="hex__bookPage-nav">
                 <img src={hexLogo} alt='hexLogo'/>
-                <button className='hex__bookPage-btn' type='button' onClick={moveToLibrary}>Go back to all Books</button>
+                <button className='hex__bookPage-header-btn' type='button' onClick={moveToLibrary}>Go back to all Books</button>
             </div>
           </div>
           <div className='gradient__bg'>

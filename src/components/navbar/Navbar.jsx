@@ -96,7 +96,25 @@ const Navbar = () => {
             <div className='hex__navbar-menu_container-links'>
               <Menu />
               <div className='hex__navbar-menu_container-links-sign'>
-                <p>Sign in</p>
+                {signIn 
+                  ? <p onClick={() => setSignIn(false)}>Close</p> 
+                  : <p onClick={() => setSignIn(true)}>Sign in</p>
+                }
+                {signIn && (
+                  <div className='hex__sign-up_container scale-up-center'>
+                    <label className='hex__sign-up_container-comp'>
+                        <p>Enter email:</p>
+                        <input type="text" name='email' placeholder='Email' value={data.email} onChange={handleChange} />
+                    </label>
+                    <label className='hex__sign-up_container-comp'>
+                        <p>Password:</p>
+                        <input type="password" name='password' placeholder='Password' value={data.password} onChange={handleChange} />
+                    </label>
+                    <label className='hex__sign-up_container-comp'>
+                      <button type='button' onClick={logIn}>Log in</button>
+                    </label>
+                  </div>
+                )}
                 <button type='button' onClick={moveToSignUp}>Sing up</button>
               </div>
             </div>

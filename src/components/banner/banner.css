@@ -21,4 +21,34 @@
     top: 0;
     left: 0;
     overflow: hidden;
+    background-size: 800px;
+}
+
+@media screen and (max-width: 1025px) {
+    .banner-user {
+        height: 370px;
+        width: 660px;
+        margin-top: 45px;
+        margin-left: 20px;
+        margin-bottom: 5px;
+        border-radius: 3rem;
+    }
+
+    .bg {
+        background-size: 660px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .banner-user {
+        height: 185px;
+        width: 330px;
+        margin-top: 45px;
+        margin-bottom: 5px;
+        border-radius: 3rem;
+    }
+
+    .bg {
+        background-size: 330px;
+    }
 }

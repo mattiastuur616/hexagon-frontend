@@ -46,3 +46,9 @@
     background-color: yellow;
     padding: 10px;
 }
+
+@media screen and (max-width: 550px) {
+    .hex__sign-up_form button {
+        margin-bottom: 8rem;
+    }
+}

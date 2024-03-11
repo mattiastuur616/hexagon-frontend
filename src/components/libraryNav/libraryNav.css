@@ -17,7 +17,7 @@
     margin-left: 2rem;
 }
 
-.hex__libraryNav-btn button, .hex__libraryNav-link {
+.hex__libraryNav-link {
     background: #fff700;
     color: #8d00eb;
     font-family: var(--font-family);
@@ -50,12 +50,22 @@
 
 @media screen and (max-width: 550px) {
     .hex__libraryNav {
+        display: flex;
         flex-direction: column;
-        margin: 4rem 2rem;
     }
 
-    .hex__libraryNav-btn button {
-        font-size: 14px;
-        line-height: 28px;
+    .hex__libraryNav-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5px;
+    }
+
+    .hex__libraryNav-link {
+        font-size: 18px;
+        line-height: 35px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 5px;
     }
 }

@@ -38,3 +38,17 @@
     padding-left: 14rem;
     font-size: 50px;
 }
+
+@media screen and (max-width: 770px) {
+    .hex__sign-up-navbar-header h1 {
+        padding-left: 4rem;
+        font-size: 2.3rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .hex__sign-up-navbar-header h1 {
+        padding-left: 1rem;
+        font-size: 1px;
+    }
+}

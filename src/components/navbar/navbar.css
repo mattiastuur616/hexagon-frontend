@@ -167,4 +167,9 @@
     .hex__navbar-menu_conainer-links-sign {
         display: block;
     }
+
+    .hex__sign-up_container {
+        margin-top: 0rem;
+        position: relative;
+    }
 }

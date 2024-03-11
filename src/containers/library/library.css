@@ -32,15 +32,15 @@
     grid-gap: 2rem;
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1025px) {
     .hex__library-container {
         flex-direction: column-reverse;
     }
 
     .hex__library-container_group {
         margin: 2rem 0;
-        width: 48%;
         height: 250px;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
