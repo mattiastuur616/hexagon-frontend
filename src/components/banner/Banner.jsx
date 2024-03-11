@@ -9,22 +9,22 @@ const Banner = () => {
     return(
         <BannerAnim prefixCls="banner-user" autoPlay>
             <Element prefixCls="banner-user-elem" key="0">
-                <BgElement className="bg" style={{ backgroundImage: `url(${banner1})`, backgroundRepeat: "no-repeat", backgroundSize: 800 }} />
+                <BgElement className="bg" style={{ backgroundImage: `url(${banner1})`, backgroundRepeat: "no-repeat" }} />
             </Element>
             <Element prefixCls="banner-user-elem" key="1">
-                <BgElement className="bg" style={{ backgroundImage: `url(${banner2})`, backgroundRepeat: "no-repeat", backgroundSize: 800 }} />
+                <BgElement className="bg" style={{ backgroundImage: `url(${banner2})`, backgroundRepeat: "no-repeat" }} />
             </Element>
             <Element prefixCls="banner-user-elem" key="2">
-                <BgElement className="bg" style={{ backgroundImage: `url(${banner3})`, backgroundRepeat: "no-repeat", backgroundSize: 800 }} />
+                <BgElement className="bg" style={{ backgroundImage: `url(${banner3})`, backgroundRepeat: "no-repeat" }} />
             </Element>
             <Element prefixCls="banner-user-elem" key="3">
-                <BgElement className="bg" style={{ backgroundImage: `url(${banner4})`, backgroundRepeat: "no-repeat", backgroundSize: 800 }} />
+                <BgElement className="bg" style={{ backgroundImage: `url(${banner4})`, backgroundRepeat: "no-repeat" }} />
             </Element>
             <Element prefixCls="banner-user-elem" key="4">
-                <BgElement className="bg" style={{ backgroundImage: `url(${banner5})`, backgroundRepeat: "no-repeat", backgroundSize: 800 }} />
+                <BgElement className="bg" style={{ backgroundImage: `url(${banner5})`, backgroundRepeat: "no-repeat" }} />
             </Element>
             <Element prefixCls="banner-user-elem" key="5">
-                <BgElement className="bg" style={{ backgroundImage: `url(${banner0})`, backgroundRepeat: "no-repeat", backgroundSize: 800 }} />
+                <BgElement className="bg" style={{ backgroundImage: `url(${banner0})`, backgroundRepeat: "no-repeat" }} />
             </Element>
         </BannerAnim>
     )

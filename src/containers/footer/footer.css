@@ -47,6 +47,13 @@
     }
 }
 
+@media screen and (max-width: 770px) {
+    .hex__footer-people {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 @media screen and (max-width: 550px) {
     .hex__footer-heading h1 {
         font-size: 34px;
@@ -58,7 +65,12 @@
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
+    .hex__footer-people {
+        display: flex;
+        flex-direction: column;
+    }
+
     .hex__footer-heading h1 {
         font-size: 27px;
         line-height: 38px;

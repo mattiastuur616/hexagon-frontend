@@ -111,3 +111,64 @@
     height: 500px;
     width: 500px;
 }
+
+@media screen and (max-width: 990px) {
+    .hex__payment {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 25rem;
+    }
+
+    .hex__payment-container_book {
+        margin-left: 12rem;
+    }
+
+    .hex__payment-form-header {
+        margin-left: 15rem;
+    }
+
+    .hex__payment-form-group {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    .hex__payment-btn {
+        margin-left: 5rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .hex__payment {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 25rem;
+    }
+
+    .hex__payment-container_book {
+        width: 288px;
+        height: 570px;
+        margin-left: 3rem;
+    }
+
+    .hex__payment-container_book-image img {
+        width: 288px;
+        height: 384px;
+    }
+
+    .hex__payment-form-header {
+        margin-left: 40px;
+    }
+
+    .hex__payment-form-group {
+        margin-left: 3rem;
+    }
+
+    .hex__payment-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 1px;
+        margin-top: 2rem;
+        width: 400px;
+    }
+}

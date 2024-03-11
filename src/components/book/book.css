@@ -61,7 +61,3 @@
     cursor: pointer;
     min-width: 150px;
 }
-
-.hex__book-container_book-content p:last-child {
-    cursor: pointer;
-}

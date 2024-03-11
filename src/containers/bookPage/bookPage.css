@@ -17,7 +17,7 @@
     margin-left: 2rem;
 }
 
-.hex__bookPage-btn {
+.hex__bookPage-btn, .hex__bookPage-header-btn {
     background: #fff700;
     color: #8d00eb;
     font-family: var(--font-family);
@@ -117,6 +117,32 @@
     margin-top: 4rem;
 }
 
+@media screen and (max-width: 990px) {
+    .hex__bookPage-page {
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+
+    .hex__bookPage-pageChange {
+        align-items: center;
+        margin-left: 11rem;
+    }
+
+    .hex__bookPage-btn, .hex__bookPage-bookMark {
+        margin-bottom: 1px;
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .hex__bookPage-page h1 {
+        font-size: 30px;
+        margin-top: 4rem;
+        margin-left: 4rem;
+    }
+}
+
 @media screen and (max-width: 650px) {
     .hex__bookPage {
         flex-direction: column;
@@ -129,12 +155,44 @@
 
 @media screen and (max-width: 550px) {
     .hex__bookPage {
+        display: flex;
         flex-direction: column;
-        margin: 4rem 2rem;
     }
 
-    .hex__bookPage-nav button {
+    .hex__bookPage-nav {
         font-size: 14px;
         line-height: 28px;
+    }
+
+    .hex__bookPage-heading h1 {
+        font-size: 24px;
+    }
+
+    .hex__bookPage-page {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .hex__bookPage-page h1 {
+        font-size: 20px;
+        margin-top: 4rem;
+        margin-left: 2rem;
+    }
+
+    .hex__bookPage-page p {
+        margin-top: 2rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .hex__bookPage-pageChange {
+        align-items: center;
+        margin-left: 3rem;
+    }
+
+    .hex__bookPage-btn, .hex__bookPage-bookMark {
+        margin-bottom: 1px;
+        margin-top: 2rem;
+        margin-left: 4rem;
     }
 }
