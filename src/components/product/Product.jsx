@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import { motion } from 'framer-motion'
 import './product.css'
 
 const Product = ({ imgUrl, title, productInfo, prize, chapter }) => {
@@ -36,7 +37,7 @@ const Product = ({ imgUrl, title, productInfo, prize, chapter }) => {
         } else {
             return (
                 <div className='hex__product-container_book-prize'>
-                    <button type='button' onClick={moveToPayment}>Purchase</button>
+                    <motion.button whileHover={{ scale: 1.1 }} type='button' onClick={moveToPayment}>Purchase</motion.button>
                     <p className='hex__product-container_book-prize-value'>{prize}</p>
                 </div>
             )

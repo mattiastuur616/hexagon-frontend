@@ -2,14 +2,15 @@ import React, { useState } from 'react'
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import '../navbar/navbar.css'
 import hexLogo from '../../assets/HexLogo.png'
+import { motion } from 'framer-motion';
 import axios from 'axios';
 
 const Menu = () => {
   return (
     <>
-    <p><a href='#welcome'>Welcome</a></p>
-    <p><a href='#whex'>The Hex and Books</a></p>
-    <p><a href='#aboutUs'>About Us</a></p>
+    <motion.p whileHover={{ color: "#FFFF00" }}><a href='#welcome'>Welcome</a></motion.p>
+    <motion.p whileHover={{ color: "#FFFF00" }}><a href='#whex'>The Hex and Books</a></motion.p>
+    <motion.p whileHover={{ color: "#FFFF00" }}><a href='#aboutUs'>About Us</a></motion.p>
     </>
   )
 }
@@ -35,7 +36,7 @@ const LoggedInNav = () => {
             })
         })
 
-        return <p>User {username} has logged in</p>
+        return <motion.p whileHover={{ color: "#ADFF2F" }}>User {username} has logged in</motion.p>
     }
 
     return (
@@ -50,7 +51,7 @@ const LoggedInNav = () => {
             </div>
             <div className='hex__navbar-sign'>
                 <WhatUser />
-                <button type='button' onClick={logOut}>Log out</button>
+                <motion.button whileHover={{ scale: 1.1 }} type='button' onClick={logOut}>Log out</motion.button>
             </div>
             <div className='hex__navbar-menu'>
                 {toggleMenu

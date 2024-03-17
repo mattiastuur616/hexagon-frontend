@@ -1,6 +1,7 @@
 import React from 'react'
 import './signUpNav.css'
 import { useNavigate } from 'react-router-dom'
+import { motion } from 'framer-motion'
 import hexLogo from '../../../assets/HexLogo.png'
 
 const SignUpNav = () => {
@@ -18,10 +19,10 @@ const SignUpNav = () => {
                     <img src={hexLogo} alt='hexLogo' />
                 </div>
                 <div className='hex__sign-up-navbar-sign'>
-                    <button type='button' onClick={moveToMainPage}>Main Page</button>
+                    <motion.button whileHover={{ scale: 1.1 }} type='button' onClick={moveToMainPage}>Main Page</motion.button>
                 </div>
                 <div className='hex__sign-up-navbar-header'>
-                    <h1>Create Your Account</h1>
+                    <motion.h1 initial={{ y: -100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ type: "tween", duration: 1.5 }}>Create Your Account</motion.h1>
                 </div>
             </div>
         </div>

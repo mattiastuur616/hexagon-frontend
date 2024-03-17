@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import { motion } from 'framer-motion'
 import './book.css'
 
 const Book = ({ imgUrl, chapter, title }) => {
@@ -28,7 +29,7 @@ const Book = ({ imgUrl, chapter, title }) => {
     if (purchased === true) {
       return (
         <div>
-          <button type='button' onClick={moveToBook}>Open The Book</button>
+          <motion.button whileHover={{ scale: 1.1 }} type='button' onClick={moveToBook}>Open The Book</motion.button>
         </div>
       )
     } else {

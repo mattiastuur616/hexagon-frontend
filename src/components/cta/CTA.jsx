@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import { motion } from 'framer-motion'
 import './cta.css'
 
 const CTA = () => {
@@ -28,8 +29,8 @@ const CTA = () => {
             <h3>Get the books and start discovering the story.</h3>
           </div>
           <div className="hex__cta-btn">
-            <button type="button" onClick={moveToLibrary}>Your book library</button>
-            <button type="button" onClick={moveToStore}>The Book Store</button>
+            <motion.button whileHover={{ scale: 1.1, color: "#0000FF" }} type="button" onClick={moveToLibrary}>Your book library</motion.button>
+            <motion.button whileHover={{ scale: 1.1, color: "#0000FF" }} type="button" onClick={moveToStore}>The Book Store</motion.button>
           </div>
         </div>
       )
@@ -40,7 +41,7 @@ const CTA = () => {
             <h3>Create your own user account to discover more!</h3>
           </div>
           <div className="hex__cta-btn">
-            <button type="button" onClick={moveToSignUp}>Create Account</button>
+            <motion.button whileHover={{ scale: 1.1, color: "#0000FF" }} type="button" onClick={moveToSignUp}>Create Account</motion.button>
           </div>
         </div>
       )

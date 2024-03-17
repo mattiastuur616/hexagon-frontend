@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js'
 import axios from 'axios'
 import paymentSuccessHex from '../../assets/PaymentSuccessfulHex.png'
+import { motion } from 'framer-motion'
 import './paymentForm.css'
 
 const CARD_OPTIONS = {
@@ -113,10 +114,10 @@ export default function PaymentForm() {
                             </div>
                         </fieldset>
                         <div className='hex__payment-btn'>
-                            <button onClick={handleSubmit}>Pay</button>
+                            <motion.button whileHover={{ scale: 1.1 }} onClick={handleSubmit}>Pay</motion.button>
                         </div>
                         <div className='hex__payment-btn'>
-                            <button onClick={moveBackToStore}>Cancel</button>
+                            <motion.button whileHover={{ scale: 1.1 }} onClick={moveBackToStore}>Cancel</motion.button>
                         </div>
                     </form>
                 </div>
@@ -131,8 +132,8 @@ export default function PaymentForm() {
                 </div>
                 <div className='hex__payment-result-btns'>
                     <div className='hex__payment-btn'>
-                        <button onClick={moveToLibrary}>Go to Your Library</button>
-                        <button onClick={moveBackToStore}>Back to Store</button>
+                        <motion.button whileHover={{ scale: 1.1 }} onClick={moveToLibrary}>Go to Your Library</motion.button>
+                        <motion.button whileHover={{ scale: 1.1 }} onClick={moveBackToStore}>Back to Store</motion.button>
                     </div>
                 </div>
             </div>
