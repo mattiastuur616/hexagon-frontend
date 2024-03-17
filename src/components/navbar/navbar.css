@@ -99,16 +99,19 @@
 
 .hex__sign-up_container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     position: absolute;
     padding: 2rem;
-    margin-top: 20rem;
+    margin-top: 6rem;
+    margin-right: 12rem;
     background: var(--color-footer);
     border-radius: 3rem;
 }
 
 .hex__sign-up_container-comp {
     margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-top: 3rem;
 }
 
 .hex__sign-up_container-comp p {

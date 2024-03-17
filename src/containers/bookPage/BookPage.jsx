@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import hexLogo from '../../assets/HexLogo.png'
 import axios from 'axios'
+import { motion } from 'framer-motion'
 import './bookPage.css'
 
 const BookPage = (title) => {
   title = localStorage.getItem("title");
   const navigate = useNavigate()
   const [pageNumber, setPageNumber] = useState(FindPageNumber());
+  const [pageTurn, setPageTurn] = useState(0);
 
   function FindPageNumber() {
     React.useEffect(() => {
@@ -44,12 +46,12 @@ const BookPage = (title) => {
             <div className='hex__bookPage-heading'>
               <h1 className='gradient__text'>Hexagon: {title}</h1>
             </div>
-            <div className='hex__bookPage-page'>
+            <motion.div initial={{ opacity: 0, x: pageTurn }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} className='hex__bookPage-page'>
               <ShowContent />
               <p className='hex__bookPage-pageNumber'>{pageNumber}</p>
-            </div>
+            </motion.div>
             <div className='hex__bookPage-pageChange'>
-              <button className='hex__bookPage-bookMark' type='button' onClick={saveBookMark}>Save Bookmark</button>
+              <motion.button whileHover={{ scale: 1.1 }} className='hex__bookPage-bookMark' type='button' onClick={saveBookMark}>Save Bookmark</motion.button>
             </div>
             <RenderButtons />
           </div>
@@ -106,14 +108,14 @@ const BookPage = (title) => {
     if (pageNumber === 0) {
       return (
         <div className='hex__bookPage-pageChange'>
-          <button className='hex__bookPage-btn' type='button' onClick={() => setPageNumber(pageNumber + 1)}>Go On</button>
+          <motion.button whileHover={{ scale: 1.1 }} className='hex__bookPage-btn' type='button' onClick={() => {setPageNumber(pageNumber + 1); setPageTurn(50)}}>Go On</motion.button>
         </div>
       )
     } else {
       return (
         <div className='hex__bookPage-pageChange'>
-          <button className='hex__bookPage-btn' type='button' onClick={() => setPageNumber(pageNumber - 1)}>Go Back</button>
-          <button className='hex__bookPage-btn' type='button' onClick={() => setPageNumber(pageNumber + 1)}>Go On</button>
+          <motion.button whileHover={{ scale: 1.1 }} className='hex__bookPage-btn' type='button' onClick={() => {setPageNumber(pageNumber - 1); setPageTurn(-50)}}>Go Back</motion.button>
+          <motion.button whileHover={{ scale: 1.1 }} className='hex__bookPage-btn' type='button' onClick={() => {setPageNumber(pageNumber + 1); setPageTurn(50)}}>Go On</motion.button>
         </div>
       )
     }

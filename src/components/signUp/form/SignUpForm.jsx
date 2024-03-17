@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import './signUpForm.css'
+import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
 const SignUpForm = () => {
@@ -44,7 +45,7 @@ const SignUpForm = () => {
 
     return (
         <div>
-            <div className='hex__sign-up_form'>
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 3, delay: 1.5 }} className='hex__sign-up_form'>
                 <label className='hex__sign-up_form-label'>
                     <p>Enter your first name:</p>
                     <input type="text" name='firstName' placeholder='First Name' value={data.firstName} onChange={handleChange} />
@@ -64,8 +65,8 @@ const SignUpForm = () => {
                     <p>Enter a password:</p>
                     <input type="password" name='password' placeholder='Password' value={data.password} onChange={handleChange} />
                 </label>
-                <button type='submit' onClick={createAccount}>Create The Account</button>
-            </div>
+                <motion.button whileHover={{ scale: 1.1 }} type='submit' onClick={createAccount}>Create The Account</motion.button>
+            </motion.div>
         </div>
     )
 }
