@@ -5,8 +5,8 @@ import { Banner, CTA } from '../../components'
 const WhatGPT3 = () => {
   return (
     <div>
-      <div className='hex__whatgpt3' id='whex'>
-        <div className='hex__whatgpt3-heading'>
+      <div className='hex__whathex' id='whex'>
+        <div className='hex__whathex-heading'>
           <h1 className='gradient__text'>Enter Into The New Era full of Possibilities and Magic</h1>
           <Banner />
           <CTA />

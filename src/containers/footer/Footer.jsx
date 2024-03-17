@@ -1,5 +1,6 @@
 import React from 'react'
 import './footer.css'
+import { motion } from 'framer-motion'
 import author from '../../assets/creators/author.png'
 import mystery from '../../assets/creators/mystery.png'
 
@@ -12,13 +13,13 @@ const Footer = () => {
 
       <div className='hex__footer-people'>
         <div className='hex__profile'>
-          <img src={author} alt='mainHex' />
+          <motion.img whileHover={{ scale: 1.1 }} src={author} alt='mainHex' />
           <h1>Mattias Tüür</h1>
-          <p>Original Idea Author and WebPage Creator</p>
+          <p>Original Idea Author and Web Page Creator</p>
         </div>
         <div className='hex__profile'>
-          <img src={mystery} alt='mainHex' />
-          <h1>???? ???????</h1>
+          <motion.img whileHover={{ scale: 1.1 }} src={mystery} alt='mainHex' />
+          <h1>Sten Muinast</h1>
           <p>Story Writer</p>
         </div>
       </div>

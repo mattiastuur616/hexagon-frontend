@@ -1,0 +1,65 @@
+.hex__store {
+    display: flex;
+    flex-direction: column;
+}
+
+.hex__store-heading {
+    width: 100%;
+    text-align: left;
+
+    margin-bottom: 5rem;
+}
+
+.hex__store-heading h1 {
+    font-size: 62px;
+    line-height: 75px;
+    font-family: var(--font-family);
+    font-weight: 800;
+    text-align: center;
+}
+
+.hex__store-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+.hex__store-container_group {
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
+
+@media screen and (max-width: 1025px) {
+    .hex__store-container {
+        flex-direction: column-reverse;
+    }
+
+    .hex__store-container_group {
+        margin: 2rem 0;
+        height: 250px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .hex__store-container_group {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+
+    .hex__store-heading h1 {
+        font-size: 46px;
+        line-height: 52px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .hex__store-heading h1 {
+        font-size: 34px;
+        line-height: 42px;
+    }
+
+}

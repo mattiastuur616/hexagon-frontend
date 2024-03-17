@@ -1,0 +1,54 @@
+.hex__sign-up_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7rem;
+}
+
+.hex__sign-up_text {
+    color: yellow;
+}
+
+.hex__sign-up_form button {
+    margin-top: 2rem;
+    margin-bottom: 20rem;
+    padding: 0.5rem 1rem;
+    color: yellow;
+    background: purple;
+    font-family: var(--font-familiy);
+    font-size: 20px;
+    line-height: 25px;
+
+    border-radius: 5px;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+}
+
+.hex__sign-up_form-label {
+    margin: 1rem;
+    display: flex;
+}
+
+.hex__sign-up_form-label p {
+    display: flex;
+    flex-direction: row;
+    margin-right: 2rem;
+    color: greenyellow;
+    font-size: 25px;
+}
+
+.hex__sign-up_form-label input {
+    border-style: ridge;
+    border-width: 10px;
+    border-radius: 1rem;
+    border-color: purple;
+    background-color: yellow;
+    padding: 10px;
+}
+
+@media screen and (max-width: 550px) {
+    .hex__sign-up_form button {
+        margin-bottom: 8rem;
+    }
+}
