@@ -1,8 +1,8 @@
-import React from 'react'
-import './footer.css'
-import { motion } from 'framer-motion'
-import author from '../../assets/creators/author.png'
-import mystery from '../../assets/creators/mystery.png'
+import React from 'react';
+import { motion } from 'framer-motion';
+import author from '../../assets/creators/author.png';
+import mystery from '../../assets/creators/mystery.png';
+import './footer.css';
 
 const Footer = () => {
   return (
@@ -17,6 +17,7 @@ const Footer = () => {
           <h1>Mattias Tüür</h1>
           <p>Original Idea Author and Web Page Creator</p>
         </div>
+
         <div className='hex__profile'>
           <motion.img whileHover={{ scale: 1.1 }} src={mystery} alt='mainHex' />
           <h1>Sten Muinast</h1>

@@ -1,9 +1,10 @@
 .hex__bookPage {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-direction: row;
+    justify-content: space-between;
+
     background: var(--gradient-bar);
+    align-items: center;
 }
 
 .hex__bookPage-nav img {
@@ -18,73 +19,81 @@
 }
 
 .hex__bookPage-btn, .hex__bookPage-header-btn {
-    background: #fff700;
     color: #8d00eb;
-    font-family: var(--font-family);
-    font-weight: 700;
+    background: #fff700;
+
     font-size: 18px;
-    line-height: 30px;
+    font-weight: 700;
+    font-family: var(--font-family);
+
     padding: 0.5rem 1rem;
+    min-width: 150px;
+    line-height: 30px;
     border-radius: 2rem;
+
     margin-top: 50px;
-    margin-bottom: 50px;
     margin-left: 30px;
-    text-align: center;
-    align-items: center;
+    margin-bottom: 50px;
 
     border: none;
-    outline: none;
     cursor: pointer;
-    min-width: 150px;
+    outline: none;
+    text-align: center;
+    align-items: center;
 }
 
 .hex__bookPage-bookMark {
-    background: #09ff00;
     color: #1500ff;
-    font-family: var(--font-family);
-    font-weight: 700;
+    background: #09ff00;
+
     font-size: 18px;
-    line-height: 30px;
+    font-weight: 700;
+    font-family: var(--font-family);
+
     padding: 0.5rem 1rem;
+    min-width: 150px;
+    line-height: 30px;
     border-radius: 2rem;
+
     margin-top: 50px;
     margin-left: 115px;
-    text-align: center;
-    align-items: center;
 
     border: none;
-    outline: none;
     cursor: pointer;
-    min-width: 150px;
+    outline: none;
+    text-align: center;
+    align-items: center;
 }
 
 .hex__bookPage-heading {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    
+
     padding: 2rem 0 2rem;
+    align-items: center;
 }
 
 .hex__bookPage-heading h1 {
     font-size: 34px;
     font-weight: 800;
     font-family: var(--font-family);
+
     max-width: 510px;
     text-align: center;
 }
 
 .hex__bookPage-page {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    justify-content: space-between;
 
-    padding-bottom: 1cm;
     margin-left: 22rem;
     margin-right: 22rem;
+
     background: palegoldenrod;
+    padding-bottom: 1cm;
 }
 
 .hex__bookPage-pageNumber {
@@ -107,10 +116,11 @@
 }
 
 .hex__bookPage-page h1 {
+    color: brown;
+
     margin-top: 4rem;
     margin-left: 20rem;
     margin-right: 4rem;
-    color: brown;
 }
 
 .hex__bookPage-page p:first-child {
@@ -129,9 +139,9 @@
     }
 
     .hex__bookPage-btn, .hex__bookPage-bookMark {
-        margin-bottom: 1px;
         margin-top: 2rem;
         margin-left: 2rem;
+        margin-bottom: 1px;
     }
 }
 
@@ -191,8 +201,8 @@
     }
 
     .hex__bookPage-btn, .hex__bookPage-bookMark {
-        margin-bottom: 1px;
         margin-top: 2rem;
         margin-left: 4rem;
+        margin-bottom: 1px;
     }
 }

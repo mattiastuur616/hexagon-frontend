@@ -1,7 +1,7 @@
-import React from 'react'
-import background from '../../assets/signUp/signUpPic.png'
-import SignUpNav from '../signUp/navbar/SignUpNav'
-import SignUpForm from '../signUp/form/SignUpForm'
+import React from 'react';
+import SignUpNav from '../signUp/navbar/SignUpNav';
+import SignUpForm from '../signUp/form/SignUpForm';
+import background from '../../assets/signUp/signUpPic.png';
 
 const SignUp = () => {
   return (

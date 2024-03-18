@@ -1,18 +1,18 @@
 .hex__navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;    
+    align-items: center; 
+    justify-content: space-between;   
 
+    padding-top: 2rem;
     padding-left: 3rem;
     padding-right: 3rem;
-    padding-top: 2rem;
 }
 
 .hex__navbar-links {
     flex: 1;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: flex-start;
 }
 
 .hex__navbar-links_logo {
@@ -30,10 +30,11 @@
 }
 
 .hex__navbar-sign {
-    font-family: "Georgia";
     display: flex;
     justify-content: flex-end;
+
     align-items: center;
+    font-family: "Georgia";
 }
 
 .hex__navbar-links_container p,
@@ -41,77 +42,85 @@
 .hex__navbar-menu_container-links p,
 .hex__navbar-menu_conainer p {
     color: #fff;
-    font-family: var(--font-familiy);
-    font-weight: 500;
+
     font-size: 18px;
-    line-height: 25px;
+    font-weight: 500;
+    font-family: var(--font-familiy);
+
     margin: 0 1rem;
     cursor: pointer;
+    line-height: 25px;
 }
 
 .hex__navbar-sign button,
 .hex__navbar-menu_conainer button,
 .hex__navbar-menu_container-links-sign button {
-    padding: 0.5rem 1rem;
     color: purple;
     background: yellow;
-    font-family: var(--font-familiy);
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 25px;
-    left: 1153px;
-    top: 55px;
 
-    border-radius: 5px;
-    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: var(--font-familiy);
+
+    top: 55px;
+    left: 1153px;
+    padding: 0.5rem 1rem;
+    line-height: 25px;
+
     border: 0;
+    border-radius: 5px;
+
+    cursor: pointer;
     outline: none;
 }
 
 .hex__navbar-menu {
-    margin-left: 1rem;
-
     display: none;
     position: relative;
-}
 
-.hex__navbar-menu svg {
-    cursor: pointer;
+    margin-left: 1rem;
 }
 
 .hex__navbar-menu_container {
+    background: var(--color-footer);
+
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
     flex-direction: column;
 
-    text-align: end;
-    background: var(--color-footer);
-    padding: 2rem;
     position: absolute;
+    text-align: end;
+    align-items: flex-end;
+    justify-content: flex-end;
+
     top: 40px;
     right: 0;
+
+    padding: 2rem;
     margin-top: 1rem;
+
     min-width: 210px;
-    border-radius: 5px;
     box-shadow: 0 0 5 rgba(0,0,0,0.2);
+    border-radius: 5px;
 }
 
 .hex__sign-up_container {
+    background: var(--color-footer);
+
     display: flex;
     flex-direction: row;
-    position: absolute;
-    padding: 2rem;
+
     margin-top: 6rem;
     margin-right: 12rem;
-    background: var(--color-footer);
+
+    padding: 2rem;
+    position: absolute;
     border-radius: 3rem;
 }
 
 .hex__sign-up_container-comp {
-    margin-bottom: 1rem;
-    margin-left: 1rem;
     margin-top: 3rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
 }
 
 .hex__sign-up_container-comp p {
@@ -119,11 +128,12 @@
 }
 
 .hex__sign-up_container-comp input {
+    height: 2rem;
+
+    border-color: purple;
     border-style: ridge;
     border-width: 5px;
-    height: 2rem;
     border-radius: 1rem;
-    border-color: purple;
 }
 
 .hex__sign-up_container-comp:last-child {
@@ -172,7 +182,7 @@
     }
 
     .hex__sign-up_container {
-        margin-top: 0rem;
         position: relative;
+        margin-top: 0rem;
     }
 }

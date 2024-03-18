@@ -1,21 +1,23 @@
 .hex__brand {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 .hex__brand div {
     flex: 1;
-    max-width: 150px;
+    display: flex;
+
     min-width: 120px;
+    max-width: 150px;
+
+    margin-top: 5rem;
     margin-left: 7rem;
     margin-right: 7rem;
-    margin-top: 5rem;
 
-    display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 .hex__brand img {
@@ -24,15 +26,18 @@
 }
 
 .hex__footer-copyright {
-    margin-top: 2rem;
-    text-align: center;
     width: 100%;
+    text-align: center;
+
+    margin-top: 2rem;
     margin-bottom: 7rem;
 }
 
 .hex__footer-copyright p {
+    color: #fff;
+
     font-size: 12px;
     font-family: var(--font-family);
+    
     line-height: 15px;
-    color: #fff;
 }

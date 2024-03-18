@@ -1,9 +1,9 @@
-import React from 'react'
-import './mainPage.css';
-import { Footer, WhatHex, Header } from '../../containers'
-import { Brand, Navbar } from '..'
-import background from '../../assets/HexRings.png'
+import React from 'react';
+import { Brand, Navbar } from '..';
+import background from '../../assets/HexRings.png';
 import LoggedInNav from '../loggedInNav/LoggedInNav';
+import { Footer, WhatHex, Header } from '../../containers';
+import './mainPage.css';
 
 const MainPage = () => {
 
@@ -15,12 +15,14 @@ const MainPage = () => {
             <LoggedInNav />
             <Header />
           </div>
+
           <div style={{backgroundImage: `url(${background})`,
               backgroundRepeat: "no-repeat",
               backgroundSize: 1520
             }}>
             <WhatHex />
           </div>
+
           <div className='gradient__books'>
             <Footer />
           </div>
@@ -34,12 +36,14 @@ const MainPage = () => {
             <Navbar />
             <Header />
           </div>
+
           <div style={{backgroundImage: `url(${background})`,
               backgroundRepeat: "no-repeat",
               backgroundSize: 1520
             }}>
             <WhatHex />
           </div>
+          
           <div className='gradient__books'>
             <Footer />
           </div>

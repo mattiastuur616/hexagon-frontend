@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
-import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
-import './navbar.css'
 import { motion } from 'framer-motion';
-import hexLogo from '../../assets/HexLogo.png'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import hexLogo from '../../assets/HexLogo.png';
+import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
+import './navbar.css';
 
 const Menu = () => {
   return (
@@ -61,10 +61,12 @@ const Navbar = () => {
         <div className="hex__navbar-links_logo">
           <img src={hexLogo} alt='hexLogo'/>
         </div>
+
         <div className='hex__navbar-links_container'>
           <Menu />
         </div>
       </div>
+
       <div className='hex__navbar-sign'>
         {signIn 
           ? <motion.p whileHover={{ color: "#FFFF00" }} onClick={() => setSignIn(false)}>Close</motion.p> 
@@ -75,20 +77,37 @@ const Navbar = () => {
             <div>
               <label className='hex__sign-up_container-comp'>
                   <p>Enter email:</p>
-                  <input type="text" name='email' placeholder='Email' value={data.email} onChange={handleChange} />
+                  <input 
+                  type="text" 
+                  name='email' 
+                  placeholder='Email' 
+                  value={data.email} 
+                  onChange={handleChange} />
               </label>
+
               <label className='hex__sign-up_container-comp'>
                   <p>Password:</p>
-                  <input type="password" name='password' placeholder='Password' value={data.password} onChange={handleChange} />
+                  <input 
+                  type="password" 
+                  name='password' 
+                  placeholder='Password' 
+                  value={data.password} 
+                  onChange={handleChange} />
               </label>
             </div>
+
             <label className='hex__sign-up_container-comp'>
-              <motion.button whileHover={{ scale: 1.1 }} type='button' onClick={logIn}>Log in</motion.button>
+              <motion.button 
+              whileHover={{ scale: 1.1 }} 
+              type='button' 
+              onClick={logIn}>Log in</motion.button>
             </label>
           </motion.div>
         )}
+        
         <motion.button whileHover={{ scale: 1.1 }} type='button' onClick={moveToSignUp}>Sing up</motion.button>
       </div>
+
       <div className='hex__navbar-menu'>
         {toggleMenu
           ? <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />
@@ -107,17 +126,30 @@ const Navbar = () => {
                   <div className='hex__sign-up_container scale-up-center'>
                     <label className='hex__sign-up_container-comp'>
                         <p>Enter email:</p>
-                        <input type="text" name='email' placeholder='Email' value={data.email} onChange={handleChange} />
+                        <input 
+                        type="text" 
+                        name='email' 
+                        placeholder='Email' 
+                        value={data.email} 
+                        onChange={handleChange} />
                     </label>
+
                     <label className='hex__sign-up_container-comp'>
                         <p>Password:</p>
-                        <input type="password" name='password' placeholder='Password' value={data.password} onChange={handleChange} />
+                        <input 
+                        type="password" 
+                        name='password' 
+                        placeholder='Password' 
+                        value={data.password} 
+                        onChange={handleChange} />
                     </label>
+
                     <label className='hex__sign-up_container-comp'>
                       <button type='button' onClick={logIn}>Log in</button>
                     </label>
                   </div>
                 )}
+
                 <button type='button' onClick={moveToSignUp}>Sing up</button>
               </div>
             </div>

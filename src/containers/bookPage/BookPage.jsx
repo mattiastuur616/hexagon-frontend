@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import hexLogo from '../../assets/HexLogo.png'
-import axios from 'axios'
-import { motion } from 'framer-motion'
-import './bookPage.css'
+import axios from 'axios';
+import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import hexLogo from '../../assets/HexLogo.png';
+import './bookPage.css';
 
 const BookPage = (title) => {
   title = localStorage.getItem("title");
@@ -30,40 +30,6 @@ const BookPage = (title) => {
     ).catch(error => {
       console.log(error)
     });
-  }
-
-  function CheckStatus() {
-    if (localStorage.getItem("user") !== null) {
-      return (
-        <div>
-          <div className='hex__bookPage'>
-            <div className="hex__bookPage-nav">
-                <img src={hexLogo} alt='hexLogo'/>
-                <button className='hex__bookPage-header-btn' type='button' onClick={moveToLibrary}>Go back to all Books</button>
-            </div>
-          </div>
-          <div className='gradient__bg'>
-            <div className='hex__bookPage-heading'>
-              <h1 className='gradient__text'>Hexagon: {title}</h1>
-            </div>
-            <motion.div initial={{ opacity: 0, x: pageTurn }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} className='hex__bookPage-page'>
-              <ShowContent />
-              <p className='hex__bookPage-pageNumber'>{pageNumber}</p>
-            </motion.div>
-            <div className='hex__bookPage-pageChange'>
-              <motion.button whileHover={{ scale: 1.1 }} className='hex__bookPage-bookMark' type='button' onClick={saveBookMark}>Save Bookmark</motion.button>
-            </div>
-            <RenderButtons />
-          </div>
-        </div>
-      )
-    } else {
-      return (
-        <div className='hex__sign-up-navbar-header'>
-          <h1>No access, user has not logged in</h1>
-        </div>
-      )
-    }
   }
 
   function moveToLibrary() {
@@ -108,14 +74,85 @@ const BookPage = (title) => {
     if (pageNumber === 0) {
       return (
         <div className='hex__bookPage-pageChange'>
-          <motion.button whileHover={{ scale: 1.1 }} className='hex__bookPage-btn' type='button' onClick={() => {setPageNumber(pageNumber + 1); setPageTurn(50); window.scrollTo({ top: 147, behavior: "smooth" })}}>Go On</motion.button>
+          <motion.button 
+          whileHover={{ scale: 1.1 }} 
+          className='hex__bookPage-btn' 
+          type='button' 
+          onClick={() => {setPageNumber(pageNumber + 1); setPageTurn(50); 
+          window.scrollTo({ top: 147, behavior: "smooth" })
+          }}>
+            Go On
+            </motion.button>
         </div>
       )
     } else {
       return (
         <div className='hex__bookPage-pageChange'>
-          <motion.button whileHover={{ scale: 1.1 }} className='hex__bookPage-btn' type='button' onClick={() => {setPageNumber(pageNumber - 1); setPageTurn(-50); window.scrollTo({ top: 147, behavior: "smooth" })}}>Go Back</motion.button>
-          <motion.button whileHover={{ scale: 1.1 }} className='hex__bookPage-btn' type='button' onClick={() => {setPageNumber(pageNumber + 1); setPageTurn(50); window.scrollTo({ top: 147, behavior: "smooth" })}}>Go On</motion.button>
+          <motion.button 
+          whileHover={{ scale: 1.1 }} 
+          className='hex__bookPage-btn' 
+          type='button' 
+          onClick={() => {setPageNumber(pageNumber - 1); setPageTurn(-50); 
+          window.scrollTo({ top: 147, behavior: "smooth" })
+          }}>
+            Go Back
+            </motion.button>
+          <motion.button 
+          whileHover={{ scale: 1.1 }} 
+          className='hex__bookPage-btn' 
+          type='button' 
+          onClick={() => {setPageNumber(pageNumber + 1); setPageTurn(50); 
+          window.scrollTo({ top: 147, behavior: "smooth" })
+          }}>Go On</motion.button>
+        </div>
+      )
+    }
+  }
+
+  function CheckStatus() {
+    if (localStorage.getItem("user") !== null) {
+      return (
+        <div>
+          <div className='hex__bookPage'>
+            <div className="hex__bookPage-nav">
+                <img src={hexLogo} alt='hexLogo'/>
+                <button 
+                className='hex__bookPage-header-btn' 
+                type='button' 
+                onClick={moveToLibrary}>
+                  Go back to all Books
+                  </button>
+            </div>
+          </div>
+          <div className='gradient__bg'>
+            <div className='hex__bookPage-heading'>
+              <h1 className='gradient__text'>Hexagon: {title}</h1>
+            </div>
+            <motion.div 
+            initial={{ opacity: 0, x: pageTurn }} 
+            animate={{ opacity: 1, x: 0 }} 
+            transition={{ duration: 1 }} 
+            className='hex__bookPage-page'>
+              <ShowContent />
+              <p className='hex__bookPage-pageNumber'>{pageNumber}</p>
+            </motion.div>
+            <div className='hex__bookPage-pageChange'>
+              <motion.button 
+              whileHover={{ scale: 1.1 }} 
+              className='hex__bookPage-bookMark' 
+              type='button' 
+              onClick={saveBookMark}>
+                Save Bookmark
+                </motion.button>
+            </div>
+            <RenderButtons />
+          </div>
+        </div>
+      )
+    } else {
+      return (
+        <div className='hex__sign-up-navbar-header'>
+          <h1>No access, user has not logged in</h1>
         </div>
       )
     }

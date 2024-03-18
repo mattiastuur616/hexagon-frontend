@@ -1,7 +1,7 @@
-import React from 'react'
-import { Library } from '../../containers'
-import LibraryNav from '../libraryNav/LibraryNav'
-import Brand from '../brand/Brand'
+import React from 'react';
+import Brand from '../brand/Brand';
+import { Library } from '../../containers';
+import LibraryNav from '../libraryNav/LibraryNav';
 
 const LibraryPage = () => {
 
@@ -12,9 +12,11 @@ const LibraryPage = () => {
           <div>
             <LibraryNav />
           </div>
+
           <div className='gradient__books'>
             <Library />
           </div>
+          
           <div>
             <Brand />
           </div>

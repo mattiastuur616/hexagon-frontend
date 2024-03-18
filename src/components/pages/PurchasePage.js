@@ -1,7 +1,7 @@
-import React from 'react'
-import { Store } from '../../containers'
-import StoreNav from '../storeNav/StoreNav'
-import Brand from '../brand/Brand'
+import React from 'react';
+import Brand from '../brand/Brand';
+import { Store } from '../../containers';
+import StoreNav from '../storeNav/StoreNav';
 
 const PurchasePage = () => {
 
@@ -12,9 +12,11 @@ const PurchasePage = () => {
           <div>
               <StoreNav />
           </div>
+
           <div className='gradient__store'>
               <Store />
           </div>
+          
           <div>
               <Brand />
           </div>
