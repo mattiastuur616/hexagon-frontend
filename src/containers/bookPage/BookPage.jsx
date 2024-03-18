@@ -108,14 +108,14 @@ const BookPage = (title) => {
     if (pageNumber === 0) {
       return (
         <div className='hex__bookPage-pageChange'>
-          <motion.button whileHover={{ scale: 1.1 }} className='hex__bookPage-btn' type='button' onClick={() => {setPageNumber(pageNumber + 1); setPageTurn(50)}}>Go On</motion.button>
+          <motion.button whileHover={{ scale: 1.1 }} className='hex__bookPage-btn' type='button' onClick={() => {setPageNumber(pageNumber + 1); setPageTurn(50); window.scrollTo({ top: 147, behavior: "smooth" })}}>Go On</motion.button>
         </div>
       )
     } else {
       return (
         <div className='hex__bookPage-pageChange'>
-          <motion.button whileHover={{ scale: 1.1 }} className='hex__bookPage-btn' type='button' onClick={() => {setPageNumber(pageNumber - 1); setPageTurn(-50)}}>Go Back</motion.button>
-          <motion.button whileHover={{ scale: 1.1 }} className='hex__bookPage-btn' type='button' onClick={() => {setPageNumber(pageNumber + 1); setPageTurn(50)}}>Go On</motion.button>
+          <motion.button whileHover={{ scale: 1.1 }} className='hex__bookPage-btn' type='button' onClick={() => {setPageNumber(pageNumber - 1); setPageTurn(-50); window.scrollTo({ top: 147, behavior: "smooth" })}}>Go Back</motion.button>
+          <motion.button whileHover={{ scale: 1.1 }} className='hex__bookPage-btn' type='button' onClick={() => {setPageNumber(pageNumber + 1); setPageTurn(50); window.scrollTo({ top: 147, behavior: "smooth" })}}>Go On</motion.button>
         </div>
       )
     }
