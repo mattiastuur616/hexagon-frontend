@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
 import axios from 'axios';
-import './signUpForm.css'
+import './signUpForm.css';
 import { motion } from 'framer-motion';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const SignUpForm = () => {
@@ -45,26 +45,55 @@ const SignUpForm = () => {
 
     return (
         <div>
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 3, delay: 1.5 }} className='hex__sign-up_form'>
+            <motion.div 
+            initial={{ opacity: 0 }} 
+            animate={{ opacity: 1 }} 
+            transition={{ duration: 3, delay: 1.5 }} 
+            className='hex__sign-up_form'>
                 <label className='hex__sign-up_form-label'>
                     <p>Enter your first name:</p>
-                    <input type="text" name='firstName' placeholder='First Name' value={data.firstName} onChange={handleChange} />
+                    <input 
+                    type="text" 
+                    name='firstName' 
+                    placeholder='First Name' 
+                    value={data.firstName} 
+                    onChange={handleChange} />
                 </label>
+
                 <label className='hex__sign-up_form-label'>
                     <p>Enter your last name:</p>
-                    <input type="text" name='lastName' placeholder='Last Name' value={data.lastName} onChange={handleChange} />
+                    <input 
+                    type="text" 
+                    name='lastName' 
+                    placeholder='Last Name' 
+                    value={data.lastName} 
+                    onChange={handleChange} />
                 </label>
+
                 <label className='hex__sign-up_form-label'>
                     <p>Your email address:</p>
-                    <input type="text" name='email' placeholder='Email' value={data.email} onChange={handleChange} />
+                    <input 
+                    type="text" 
+                    name='email' 
+                    placeholder='Email' 
+                    value={data.email} 
+                    onChange={handleChange} />
                 </label>
+
                 <div>
                     <p className='hex__sign-up_text'>Password must include at least one upper letter and be at least 18 digits long</p>
                 </div>
+
                 <label className='hex__sign-up_form-label'>
                     <p>Enter a password:</p>
-                    <input type="password" name='password' placeholder='Password' value={data.password} onChange={handleChange} />
+                    <input 
+                    type="password" 
+                    name='password' 
+                    placeholder='Password' 
+                    value={data.password} 
+                    onChange={handleChange} />
                 </label>
+
                 <motion.button whileHover={{ scale: 1.1 }} type='submit' onClick={createAccount}>Create The Account</motion.button>
             </motion.div>
         </div>

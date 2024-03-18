@@ -1,7 +1,8 @@
 .hex__sign-up_form {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+
     margin-top: 7rem;
 }
 
@@ -10,18 +11,22 @@
 }
 
 .hex__sign-up_form button {
-    margin-top: 2rem;
-    margin-bottom: 20rem;
-    padding: 0.5rem 1rem;
     color: yellow;
     background: purple;
-    font-family: var(--font-familiy);
+
     font-size: 20px;
+    font-family: var(--font-familiy);
+
+    margin-top: 2rem;
+    margin-bottom: 20rem;
+
+    padding: 0.5rem 1rem;
     line-height: 25px;
 
-    border-radius: 5px;
-    cursor: pointer;
     border: 0;
+    border-radius: 5px;
+
+    cursor: pointer;
     outline: none;
 }
 
@@ -31,19 +36,23 @@
 }
 
 .hex__sign-up_form-label p {
+    color: greenyellow;
+
     display: flex;
     flex-direction: row;
-    margin-right: 2rem;
-    color: greenyellow;
+
     font-size: 25px;
+    margin-right: 2rem;
 }
 
 .hex__sign-up_form-label input {
+    background-color: yellow;
+
     border-style: ridge;
+    border-color: purple;
     border-width: 10px;
     border-radius: 1rem;
-    border-color: purple;
-    background-color: yellow;
+
     padding: 10px;
 }
 

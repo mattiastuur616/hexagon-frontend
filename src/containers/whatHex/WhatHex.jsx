@@ -1,6 +1,6 @@
-import React from 'react'
-import './whatHex.css'
-import { Banner, CTA } from '../../components'
+import React from 'react';
+import { Banner, CTA } from '../../components';
+import './whatHex.css';
 
 const WhatGPT3 = () => {
   return (

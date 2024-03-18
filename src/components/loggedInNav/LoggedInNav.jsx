@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
-import '../navbar/navbar.css'
-import hexLogo from '../../assets/HexLogo.png'
-import { motion } from 'framer-motion';
 import axios from 'axios';
+import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import hexLogo from '../../assets/HexLogo.png';
+import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
+import '../navbar/navbar.css';
 
 const Menu = () => {
   return (
@@ -43,16 +43,19 @@ const LoggedInNav = () => {
         <div className="hex__navbar">
             <div className="hex__navbar-links">
                 <div className="hex__navbar-links_logo">
-                <img src={hexLogo} alt='hexLogo'/>
+                    <img src={hexLogo} alt='hexLogo'/>
                 </div>
+                
                 <div className='hex__navbar-links_container'>
-                <Menu />
+                    <Menu />
                 </div>
             </div>
+
             <div className='hex__navbar-sign'>
                 <WhatUser />
                 <motion.button whileHover={{ scale: 1.1 }} type='button' onClick={logOut}>Log out</motion.button>
             </div>
+
             <div className='hex__navbar-menu'>
                 {toggleMenu
                 ? <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />
@@ -61,10 +64,11 @@ const LoggedInNav = () => {
                 {toggleMenu && (
                 <div className='hex__navbar-menu_container scale-up-center'>
                     <div className='hex__navbar-menu_container-links'>
-                    <Menu />
-                    <div className='hex__navbar-menu_container-links-sign'>
-                        <button type='button' onClick={logOut}>Log out</button>
-                    </div>
+                        <Menu />
+                        
+                        <div className='hex__navbar-menu_container-links-sign'>
+                            <button type='button' onClick={logOut}>Log out</button>
+                        </div>
                     </div>
                 </div>
                 )}

@@ -1,27 +1,27 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js'
-import axios from 'axios'
-import paymentSuccessHex from '../../assets/PaymentSuccessfulHex.png'
-import { motion } from 'framer-motion'
-import './paymentForm.css'
+import axios from 'axios';
+import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import paymentSuccessHex from '../../assets/PaymentSuccessfulHex.png';
+import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
+import './paymentForm.css';
 
 const CARD_OPTIONS = {
     iconStyle: "solid",
     style: {
         base: {
-            iconColor: "#c4f0ff",
             color: "#fff",
+            iconColor: "#c4f0ff",
+            fontSize: "16px",
             fontWeight: 500,
             fontFamily: "Roboto, Open Sans, Segoe UI, sans-serif",
-            fontSize: "16px",
             fontSmoothing: "antialiased",
-            ":-webkit-autofill": { color: "#fce883" },
-            "::placeholder": { color: "#87bbfd" }
+            "::placeholder": { color: "#87bbfd" },
+            ":-webkit-autofill": { color: "#fce883" }
         },
         invalid: {
-            iconColor: "#ffc7ee",
-            color: "#ffc7ee"
+            color: "#ffc7ee",
+            iconColor: "#ffc7ee"
         }
     }
 }
@@ -34,6 +34,7 @@ export default function PaymentForm() {
         localStorage.removeItem("title");
         localStorage.removeItem("prize");
         localStorage.removeItem("imgUrl");
+
         window.scrollTo({ top: 0, behavior: "smooth" });
         navigate("/store");
     }
@@ -43,11 +44,13 @@ export default function PaymentForm() {
         localStorage.removeItem("title");
         localStorage.removeItem("prize");
         localStorage.removeItem("imgUrl");
+
         window.scrollTo({ top: 0, behavior: "smooth" });
         navigate("/library");
     }
 
     const [success, setSuccess] = useState(false);
+
     const stripe = useStripe()
     const elements = useElements()
 
@@ -96,6 +99,7 @@ export default function PaymentForm() {
                     <div className='hex__payment-container_book-image'>
                         <img src={localStorage.getItem("imgUrl")} alt='bookCover' />
                     </div>
+
                     <div className='hex__payment-container_book-content'>
                         <div>
                             <p>The Book: "Hexagon: {localStorage.getItem("title")}"</p>
@@ -103,21 +107,29 @@ export default function PaymentForm() {
                         </div>
                     </div>
                 </div>
+
                 <div>
                     <form onSubmit={handleSubmit}>
                         <div className='hex__payment-form-header'>
                             <h1>Enter Your card data</h1>
                         </div>
+
                         <fieldset style={{background: "#819efc"}}  className='hex__payment-form-group'>
                             <div className='hex__payment-form-row'>
                                 <CardElement options={CARD_OPTIONS} />
                             </div>
                         </fieldset>
+
                         <div className='hex__payment-btn'>
-                            <motion.button whileHover={{ scale: 1.1 }} onClick={handleSubmit}>Pay</motion.button>
+                            <motion.button 
+                            whileHover={{ scale: 1.1 }} 
+                            onClick={handleSubmit}>Pay</motion.button>
                         </div>
+
                         <div className='hex__payment-btn'>
-                            <motion.button whileHover={{ scale: 1.1 }} onClick={moveBackToStore}>Cancel</motion.button>
+                            <motion.button 
+                            whileHover={{ scale: 1.1 }} 
+                            onClick={moveBackToStore}>Cancel</motion.button>
                         </div>
                     </form>
                 </div>
@@ -127,13 +139,24 @@ export default function PaymentForm() {
         <div className='gradient__bg'>
             <div className='hex__payment-result'>
                 <h1 className='gradient__text'>Congratulations, You have bought a new Book!</h1>
+
                 <div className='hex__payment-result-image'>
                     <img src={paymentSuccessHex} alt='paymentSuccessHex' />
                 </div>
+
                 <div className='hex__payment-result-btns'>
                     <div className='hex__payment-btn'>
-                        <motion.button whileHover={{ scale: 1.1 }} onClick={moveToLibrary}>Go to Your Library</motion.button>
-                        <motion.button whileHover={{ scale: 1.1 }} onClick={moveBackToStore}>Back to Store</motion.button>
+                        <motion.button 
+                        whileHover={{ scale: 1.1 }} 
+                        onClick={moveToLibrary}>
+                            Go to Your Library
+                            </motion.button>
+
+                        <motion.button 
+                        whileHover={{ scale: 1.1 }} 
+                        onClick={moveBackToStore}>
+                            Back to Store
+                            </motion.button>
                     </div>
                 </div>
             </div>

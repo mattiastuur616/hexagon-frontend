@@ -5,37 +5,39 @@
 .hex__header-content {
     flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
     flex-direction: column;
+    justify-content: center;
 
+    align-items: flex-start;
     margin-right: 5rem;
 }
 
 .hex__header-content h1 {
-    font-family: var(--font-family);
-    font-weight: 800;
     font-size: 32px;
+    font-weight: 800;
+    font-family: var(--font-family);
+
     line-height: 40px;
     letter-spacing: -0.04em;
 }
 
 .hex__header-content p {
-    font-family: var(--font-family);
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 27px;
     color: var(--color-text);
 
+    font-size: 20px;
+    font-style: normal;
+    font-weight: normal;
+    font-family: var(--font-family);
+
     margin-top: 1.5rem;
+    line-height: 27px;
 }
 
 .hex__header-image {
     flex: 1;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 .hex__header-image img {

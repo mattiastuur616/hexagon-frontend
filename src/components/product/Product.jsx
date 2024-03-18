@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import axios from 'axios'
-import { motion } from 'framer-motion'
-import './product.css'
+import axios from 'axios';
+import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './product.css';
 
 const Product = ({ imgUrl, title, productInfo, prize, chapter }) => {
     const navigate = useNavigate()
@@ -12,6 +12,7 @@ const Product = ({ imgUrl, title, productInfo, prize, chapter }) => {
         localStorage.setItem("title", title);
         localStorage.setItem("prize", prize);
         localStorage.setItem("imgUrl", imgUrl);
+
         window.scrollTo({ top: 0, behavior: "smooth" });
         navigate("/payment");
     }
@@ -37,7 +38,11 @@ const Product = ({ imgUrl, title, productInfo, prize, chapter }) => {
         } else {
             return (
                 <div className='hex__product-container_book-prize'>
-                    <motion.button whileHover={{ scale: 1.1 }} type='button' onClick={moveToPayment}>Purchase</motion.button>
+                    <motion.button 
+                    whileHover={{ scale: 1.1 }} 
+                    type='button' 
+                    onClick={moveToPayment}>Purchase</motion.button>
+
                     <p className='hex__product-container_book-prize-value'>{prize}</p>
                 </div>
             )
@@ -49,6 +54,7 @@ const Product = ({ imgUrl, title, productInfo, prize, chapter }) => {
             <div className='hex__product-container_book-image'>
                 <img src={imgUrl} alt='bookCover' />
             </div>
+            
             <div className='hex__product-container_book-content'>
                 <div>
                     <p>Chapter {chapter}</p>

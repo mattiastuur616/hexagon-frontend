@@ -1,24 +1,28 @@
 .hex__payment {
     display: flex;
     flex-direction: row;
+
     padding-bottom: 50px;
 }
 
 .hex__payment-container_book {
-    width: 384px;
-    height: 670px;
-    margin-left: 250px;
-    margin-top: 50px;
+    background: var(--color-footer);
 
     display: flex;
     flex-direction: column;
-    background: var(--color-footer);
+
+    width: 384px;
+    height: 670px;
+
+    margin-top: 50px;
+    margin-left: 250px;
 }
 
 .hex__payment-container_book-image {
+    background: var(--color-footer);
+
     width: 100%;
     height: 100%;
-    background: var(--color-footer);
 }
 
 .hex__payment-container_book-image img {
@@ -27,24 +31,26 @@
 }
 
 .hex__payment-container_book-content {
+    color: #fff;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    padding: 1rem 1.5rem;
     height: 100%;
-    color: #fff;
+    padding: 1rem 1.5rem;
     font-family: var(--font-family);
 }
 
 .hex__payment-container_book-content p {
-    font-family: var(--font-family);
+    color: #fbff00;
+
     font-size: 20px;
     font-weight: 700;
+    font-family: var(--font-family);
+
     margin-top: 15px;
     line-height: 25px;
-
-    color: #fbff00;
 }
 
 .hex__payment-container_book-content p:last-child {
@@ -53,15 +59,18 @@
 
 .hex__payment-form-header {
     color: #fbff00;
-    font-family: var(--font-family);
-    margin-left: 200px;
+
     margin-top: 100px;
+    margin-left: 200px;
+
+    font-family: var(--font-family);
 }
 
 .hex__payment-form-group {
     margin-top: 50px;
-    margin-bottom: 50px;
     margin-left: 50px;
+    margin-bottom: 50px;
+
     padding: 15px;
 }
 
@@ -71,35 +80,40 @@
 
 .hex__payment-btn {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-left: 2rem;
+    justify-content: center;
+
     width: 620px;
+    margin-left: 2rem;
 }
 
 .hex__payment-btn button {
-    background: #fff700;
     color: #8d00eb;
-    font-family: var(--font-family);
-    font-weight: 700;
+    background: #fff700;
+
     font-size: 18px;
-    line-height: 30px;
-    padding: 0.5rem 1rem;
-    border-radius: 2rem;
+    font-weight: 700;
+    font-family: var(--font-family);
+
     margin: 10px;
-    text-align: center;
+    padding: 0.5rem 1rem;
+    min-width: 150px;
+    line-height: 30px;
+    border-radius: 2rem;
 
     border: none;
-    outline: none;
     cursor: pointer;
-    min-width: 150px;
+    outline: none;
+    text-align: center;
 }
 
 .hex__payment-result {
     display: flex;
     flex-direction: column;
-    padding-top: 50px;
+
     margin-left: 430px;
+
+    padding-top: 50px;
     padding-bottom: 78px;
 }
 
@@ -108,8 +122,8 @@
 }
 
 .hex__payment-result-image img {
-    height: 500px;
     width: 500px;
+    height: 500px;
 }
 
 @media screen and (max-width: 990px) {
@@ -165,10 +179,11 @@
 
     .hex__payment-btn {
         display: flex;
-        justify-content: center;
         align-items: center;
-        margin-left: 1px;
-        margin-top: 2rem;
+        justify-content: center;
+
         width: 400px;
+        margin-top: 2rem;
+        margin-left: 1px;
     }
 }
