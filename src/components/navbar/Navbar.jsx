@@ -49,6 +49,7 @@ const Navbar = () => {
           ...data,
           password: ""
         })
+        
         alert("Wrong email or password")
       }
     })
