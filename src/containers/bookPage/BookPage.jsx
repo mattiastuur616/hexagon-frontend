@@ -1,12 +1,17 @@
 import axios from 'axios';
 import { motion } from 'framer-motion';
-import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import hexLogo from '../../assets/HexLogo.png';
+import React, { useState, useEffect } from 'react';
 import './bookPage.css';
 
 const BookPage = (title) => {
   title = localStorage.getItem("title");
+
+  useEffect(() => {
+    document.title = `${title} - The Hexagon Story`;
+  })
+
   const navigate = useNavigate()
   const [pageNumber, setPageNumber] = useState(FindPageNumber());
   const [pageTurn, setPageTurn] = useState(0);

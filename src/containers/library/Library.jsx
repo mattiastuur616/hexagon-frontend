@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Book } from '../../components';
 import { chapter1, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8, chapter9 } from './imports';
 import './library.css';
 
 const Library = () => {
+
+  useEffect(() => {
+    document.title = "Library - The Hexagon Story";
+  })
+
   return (
     <div className='hex__library section__padding' id='books'>
       <div className='hex__library-heading'>
