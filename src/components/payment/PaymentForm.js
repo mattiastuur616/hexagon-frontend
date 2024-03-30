@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { motion } from 'framer-motion';
-import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import paymentSuccessHex from '../../assets/PaymentSuccessfulHex.png';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import './paymentForm.css';
@@ -27,6 +27,11 @@ const CARD_OPTIONS = {
 }
 
 export default function PaymentForm() {
+
+    useEffect(() => {
+        document.title = "Purchase - The Hexagon Story";
+    })
+
     const navigate = useNavigate()
 
     function moveBackToStore() {

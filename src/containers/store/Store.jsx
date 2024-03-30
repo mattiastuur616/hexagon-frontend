@@ -1,10 +1,15 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import React, { useEffect } from 'react';
 import { Product } from '../../components';
 import { chapter1, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8, chapter9 } from './imports';
 import './store.css';
 
 const Store = () => {
+
+  useEffect(() => {
+    document.title = "Store - The Hexagon Story";
+  })
+
   return (
     <div className='hex__store section__padding' id='store'>
       <div className='hex__store-heading'>

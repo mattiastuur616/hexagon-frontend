@@ -1,11 +1,15 @@
-import React from 'react';
 import { Brand, Navbar } from '..';
+import React, { useEffect } from 'react';
 import background from '../../assets/HexRings.png';
 import LoggedInNav from '../loggedInNav/LoggedInNav';
 import { Footer, WhatHex, Header } from '../../containers';
 import './mainPage.css';
 
 const MainPage = () => {
+
+  useEffect(() => {
+    document.title = "Home - The Hexagon Story";
+  })
 
   function ShowCorrectPage() {
     if (localStorage.getItem("user") !== null) {
