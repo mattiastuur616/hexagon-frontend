@@ -18,85 +18,103 @@ const Store = () => {
 
       <div className='hex__store-container'>
         <div className='hex__store-container_group'>
-          <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
-            <Product 
-            imgUrl={chapter1} 
-            title="The Protector of The Realm" 
-            productInfo="The Book about the first chapter in Hexagon Saga" 
-            prize="25,99 €" 
-            chapter="1" />
+          <motion.div initial={{ x: 150, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0, type: "tween" }}>
+            <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
+              <Product 
+              imgUrl={chapter1} 
+              title="The Protector of The Realm" 
+              productInfo="The Book about the first chapter in Hexagon Saga" 
+              prize="25,99 €" 
+              chapter="1" />
+            </motion.div>
           </motion.div>
 
-          <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
-            <Product 
-            imgUrl={chapter2} 
-            title="Between The Unreal" 
-            productInfo="The Book about the second chapter in Hexagon Saga" 
-            prize="25,99 €" 
-            chapter="2" />
+          <motion.div initial={{ x: 150, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.2, type: "tween" }}>
+            <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
+              <Product 
+              imgUrl={chapter2} 
+              title="Between The Unreal" 
+              productInfo="The Book about the second chapter in Hexagon Saga" 
+              prize="25,99 €" 
+              chapter="2" />
+            </motion.div>
           </motion.div>
 
-          <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
-            <Product 
-            imgUrl={chapter3} 
-            title="The World of Tomorrow" 
-            productInfo="The Book about the third chapter in Hexagon Saga" 
-            prize="25,99 €" 
-            chapter="3" />
+          <motion.div initial={{ x: 150, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.4, type: "tween" }}>
+            <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
+              <Product 
+              imgUrl={chapter3} 
+              title="The World of Tomorrow" 
+              productInfo="The Book about the third chapter in Hexagon Saga" 
+              prize="25,99 €" 
+              chapter="3" />
+            </motion.div>
           </motion.div>
 
-          <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
-            <Product 
-            imgUrl={chapter4} 
-            title="No Time to Sleep" 
-            productInfo="The Book about the fourth chapter in Hexagon Saga" 
-            prize="25,99 €" 
-            chapter="4" />
+          <motion.div initial={{ x: 150, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.6, type: "tween" }}>
+            <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
+              <Product 
+              imgUrl={chapter4} 
+              title="No Time to Sleep" 
+              productInfo="The Book about the fourth chapter in Hexagon Saga" 
+              prize="25,99 €" 
+              chapter="4" />
+            </motion.div>
           </motion.div>
 
-          <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
-            <Product 
-            imgUrl={chapter5} 
-            title="The Maze in The Storm" 
-            productInfo="The Book about the fifth chapter in Hexagon Saga" 
-            prize="25,99 €" 
-            chapter="5" />
+          <motion.div initial={{ x: 150, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.8, type: "tween" }}>
+            <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
+              <Product 
+              imgUrl={chapter5} 
+              title="The Maze in The Storm" 
+              productInfo="The Book about the fifth chapter in Hexagon Saga" 
+              prize="25,99 €" 
+              chapter="5" />
+            </motion.div>
           </motion.div>
 
-          <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
-            <Product 
-            imgUrl={chapter6} 
-            title="The Project Unspeakable" 
-            productInfo="The Book about the sixth chapter in Hexagon Saga" 
-            prize="25,99 €" 
-            chapter="6" />
+          <motion.div initial={{ x: 150, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 1, type: "tween" }}>
+            <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
+              <Product 
+              imgUrl={chapter6} 
+              title="The Project Unspeakable" 
+              productInfo="The Book about the sixth chapter in Hexagon Saga" 
+              prize="25,99 €" 
+              chapter="6" />
+            </motion.div>
           </motion.div>
 
-          <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
-            <Product 
-            imgUrl={chapter7} 
-            title="The Risk of Necromancer" 
-            productInfo="The Book about the seventh chapter in Hexagon Saga" 
-            prize="25,99 €" 
-            chapter="7" />
+          <motion.div initial={{ x: 150, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 1.2, type: "tween" }}>
+            <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
+              <Product 
+              imgUrl={chapter7} 
+              title="The Risk of Necromancer" 
+              productInfo="The Book about the seventh chapter in Hexagon Saga" 
+              prize="25,99 €" 
+              chapter="7" />
+            </motion.div>
           </motion.div>
 
-          <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
-            <Product 
-            imgUrl={chapter8} 
-            title="Timelines of The Parasyte" 
-            productInfo="The Book about the eighth chapter in Hexagon Saga" 
-            prize="25,99 €" 
-            chapter="8" />
+          <motion.div initial={{ x: 150, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 1.4, type: "tween" }}>
+            <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
+              <Product 
+              imgUrl={chapter8} 
+              title="Timelines of The Parasyte" 
+              productInfo="The Book about the eighth chapter in Hexagon Saga" 
+              prize="25,99 €" 
+              chapter="8" />
+            </motion.div>
           </motion.div>
 
-          <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
-            <Product 
-            imgUrl={chapter9} 
-            title="The Death Congress" 
-            productInfo="The Book about the ninth chapter in Hexagon Saga" 
-            prize="25,99 €" 
-            chapter="9" />
+          <motion.div initial={{ x: 150, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 1.6, type: "tween" }}>
+            <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
+              <Product 
+              imgUrl={chapter9} 
+              title="The Death Congress" 
+              productInfo="The Book about the ninth chapter in Hexagon Saga" 
+              prize="25,99 €" 
+              chapter="9" />
+            </motion.div>
           </motion.div>
         </div>
       </div>

@@ -18,16 +18,18 @@ const Header = () => {
         <motion.p 
         initial={{ opacity: 0, y: 50 }} 
         animate={{ opacity: 1, y: 0 }} 
-        transition={{ duration: 4 }}>
-          Experience The Saga. Stories about The Only League in The Planet providing Safety from what's to come. A War between The Realms. A Game of The Souls. Life againt The Death.
+        transition={{ duration: 4, delay: 3 }}>
+          Welcome to The Hexagon Story's web page in which you may experience the new saga.
+          Here you can obtain books each containing a chapter of The Horror Fantasy Story.
+          Grab the books and start experiencing a world full of Endless Possibilities and Magic.
           </motion.p>
       </div>
       
       <div className='hex__header-image'>
         <motion.img 
-        initial={{ x: 900 }} 
-        animate={{ x: 0, rotate: -360 }} 
-        transition={{ type: "tween", duration: 2 }} 
+        initial={{ x: 0, scale: 0.1 }} 
+        animate={{ x: 0, scale: 1, rotate: -360 }} 
+        transition={{ type: "tween", duration: 3 }} 
         src={mainHex} 
         alt='mainHex' />
       </div>
