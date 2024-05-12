@@ -17,6 +17,11 @@ const Product = ({ imgUrl, title, productInfo, prize, chapter }) => {
         navigate("/payment");
     }
 
+    function moveToLibrary() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        navigate("/library");
+    }
+
     function ShowOptions() {
         const [purchased, setPurchased] = useState(false);
 
@@ -32,7 +37,12 @@ const Product = ({ imgUrl, title, productInfo, prize, chapter }) => {
         if (purchased === true) {
             return (
                 <div className='hex__product-container_book-prize'>
-                    <p className='hex__product-container_book-prize-value'>Read the book in library</p>
+                    <motion.button 
+                    whileHover={{ scale: 1.1 }} 
+                    type='button' 
+                    onClick={moveToLibrary}>Go to library</motion.button>
+
+                    <p className='hex__product-container_book-prize-value'>{prize}</p>
                 </div>
             )
         } else {
