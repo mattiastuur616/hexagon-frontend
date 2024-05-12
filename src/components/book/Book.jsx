@@ -1,6 +1,5 @@
-import axios from 'axios';
 import { motion } from 'framer-motion';
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './book.css';
 

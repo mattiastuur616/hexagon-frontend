@@ -22,7 +22,7 @@ const Store = () => {
             <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
               <Product 
               imgUrl={chapter1} 
-              title="The Protector of The Realm" 
+              title="Title to be announced" 
               productInfo="The Book about the first chapter in Hexagon Saga" 
               prize="25,99 €" 
               chapter="1" />
@@ -33,7 +33,7 @@ const Store = () => {
             <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
               <Product 
               imgUrl={chapter2} 
-              title="Between The Unreal" 
+              title="Title to be announced" 
               productInfo="The Book about the second chapter in Hexagon Saga" 
               prize="25,99 €" 
               chapter="2" />
@@ -44,7 +44,7 @@ const Store = () => {
             <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
               <Product 
               imgUrl={chapter3} 
-              title="The World of Tomorrow" 
+              title="Title to be announced" 
               productInfo="The Book about the third chapter in Hexagon Saga" 
               prize="25,99 €" 
               chapter="3" />
@@ -55,7 +55,7 @@ const Store = () => {
             <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
               <Product 
               imgUrl={chapter4} 
-              title="No Time to Sleep" 
+              title="Title to be announced" 
               productInfo="The Book about the fourth chapter in Hexagon Saga" 
               prize="25,99 €" 
               chapter="4" />
@@ -66,7 +66,7 @@ const Store = () => {
             <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
               <Product 
               imgUrl={chapter5} 
-              title="The Maze in The Storm" 
+              title="Title to be announced" 
               productInfo="The Book about the fifth chapter in Hexagon Saga" 
               prize="25,99 €" 
               chapter="5" />
@@ -77,7 +77,7 @@ const Store = () => {
             <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
               <Product 
               imgUrl={chapter6} 
-              title="The Project Unspeakable" 
+              title="Title to be announced" 
               productInfo="The Book about the sixth chapter in Hexagon Saga" 
               prize="25,99 €" 
               chapter="6" />
@@ -88,7 +88,7 @@ const Store = () => {
             <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
               <Product 
               imgUrl={chapter7} 
-              title="The Risk of Necromancer" 
+              title="Title to be announced" 
               productInfo="The Book about the seventh chapter in Hexagon Saga" 
               prize="25,99 €" 
               chapter="7" />
@@ -99,7 +99,7 @@ const Store = () => {
             <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
               <Product 
               imgUrl={chapter8} 
-              title="Timelines of The Parasyte" 
+              title="Title to be announced" 
               productInfo="The Book about the eighth chapter in Hexagon Saga" 
               prize="25,99 €" 
               chapter="8" />
@@ -110,7 +110,7 @@ const Store = () => {
             <motion.div whileHover={{ scale: 1.1, boxShadow: "0px 0px 16px rgb(255,255,255)" }}>
               <Product 
               imgUrl={chapter9} 
-              title="The Death Congress" 
+              title="Title to be announced" 
               productInfo="The Book about the ninth chapter in Hexagon Saga" 
               prize="25,99 €" 
               chapter="9" />

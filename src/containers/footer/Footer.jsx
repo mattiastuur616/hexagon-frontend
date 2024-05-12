@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import author from '../../assets/creators/author.png';
-import mystery from '../../assets/creators/mystery.png';
+import writer from '../../assets/creators/writer.png';
 import './footer.css';
 
 const Footer = () => {
@@ -19,7 +19,7 @@ const Footer = () => {
         </div>
 
         <div className='hex__profile'>
-          <motion.img whileHover={{ scale: 1.1 }} src={mystery} alt='mainHex' />
+          <motion.img whileHover={{ scale: 1.1 }} src={writer} alt='mainHex' />
           <h1>Sten Muinast</h1>
           <p>Story Writer</p>
         </div>
