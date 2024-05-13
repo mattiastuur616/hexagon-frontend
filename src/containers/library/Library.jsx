@@ -7,6 +7,8 @@ import axios from 'axios';
 
 const Library = () => {
 
+  var introText = "";
+
   var delay = -0.2;
   const booksToBeShown = [];
   const [userPurchases, setUserPurchases] = useState([]);
@@ -31,6 +33,14 @@ const Library = () => {
     })
   })
 
+  if (userPurchases.length === 0) {
+    introText = "Currently You have no books to read here ...";
+  } else if (userPurchases.length === 1) {
+    introText = "Ohhh, already having one book huh? Good start for You!"
+  } else {
+    introText = "All the chapters";
+  }
+
   allBooks.map(book => {
     if (userPurchases.includes(book.number)) {
       booksToBeShown.push(book);
@@ -45,7 +55,7 @@ const Library = () => {
   return (
     <div className='hex__library section__padding' id='books'>
       <div className='hex__library-heading'>
-        <h1 className='gradient__text'>All the chapters</h1>
+        <h1 className='gradient__text'>{introText}</h1>
       </div>
 
       <div className='hex__library-container'>
