@@ -1,5 +1,5 @@
 import React from 'react';
-import { tyyr, reactLogo } from './imports';
+import { tyyrStoriesCommunityLogo, reactLogo } from './imports';
 import './brand.css';
 
 const Brand = () => {
@@ -7,7 +7,7 @@ const Brand = () => {
     <div>
       <div className='hex__brand section__padding'>
         <div>
-          <img src={tyyr} alt='tyyr' />
+          <img src={tyyrStoriesCommunityLogo} alt='tyyr' />
         </div>
 
         <div>

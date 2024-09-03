@@ -18,7 +18,29 @@
     margin-left: 2rem;
 }
 
-.hex__bookPage-btn, .hex__bookPage-header-btn {
+.hex__bookPage-btn {
+    color: #8d00eb;
+    background: #fff700;
+
+    font-size: 18px;
+    font-weight: 700;
+    font-family: var(--font-family);
+
+    padding: 0.5rem 1rem;
+    min-width: 150px;
+    line-height: 30px;
+    border-radius: 2rem;
+
+    margin-top: 50px;
+
+    border: none;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    align-items: center;
+}
+
+.hex__bookPage-header-btn {
     color: #8d00eb;
     background: #fff700;
 
@@ -56,13 +78,9 @@
     border-radius: 2rem;
 
     margin-top: 50px;
-    margin-left: 115px;
-
     border: none;
     cursor: pointer;
     outline: none;
-    text-align: center;
-    align-items: center;
 }
 
 .hex__bookPage-heading {
@@ -85,15 +103,15 @@
 
 .hex__bookPage-page {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    justify-content: space-between;
 
-    margin-left: 22rem;
-    margin-right: 22rem;
+    margin-left: 28%;
+    margin-right: 28%;
 
     background: palegoldenrod;
     padding-bottom: 1cm;
+
+    text-align: left;
 }
 
 .hex__bookPage-pageNumber {
@@ -101,8 +119,7 @@
 }
 
 .hex__bookPage-pageChange {
-    align-items: center;
-    margin-left: 35rem;
+    text-align: center;
 }
 
 .hex__bookPage-pageChange:last-child {
@@ -110,17 +127,17 @@
 }
 
 .hex__bookPage-page p {
-    margin-top: 2rem;
-    margin-left: 4rem;
-    margin-right: 4rem;
+    margin-top: 1.5rem;
+    margin-left: 9%;
+    margin-right: 9%;
 }
 
 .hex__bookPage-page h1 {
     color: brown;
 
     margin-top: 4rem;
-    margin-left: 20rem;
-    margin-right: 4rem;
+    margin-bottom: 3rem;
+    text-align: center;
 }
 
 .hex__bookPage-page p:first-child {

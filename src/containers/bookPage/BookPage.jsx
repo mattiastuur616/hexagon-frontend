@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import hexLogo from '../../assets/HexLogo.png';
+import hexLogo from '../../assets/tuurstoriescommunity_hexlogo.png';
 import React, { useState, useEffect } from 'react';
 import './bookPage.css';
 
@@ -57,7 +57,7 @@ const BookPage = (title) => {
     }, []);
 
     const dividedParts = content.map((paragraph) => {
-      if (paragraph.includes("Chapter")) {
+      if (paragraph.includes("<") && paragraph.includes(">")) {
         return (
         <h1>{paragraph}</h1>
         )
