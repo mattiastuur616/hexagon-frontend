@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import hexLogo from '../../assets/HexLogo.png';
+import hexLogo from '../../assets/tuurstoriescommunity_hexlogo.png';
 import './libraryNav.css';
 
 const LibraryNav = () => {

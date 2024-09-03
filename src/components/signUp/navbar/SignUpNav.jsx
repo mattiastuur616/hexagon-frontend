@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import hexLogo from '../../../assets/HexLogo.png';
+import hexLogo from '../../../assets/tuurstoriescommunity_hexlogo.png';
 import './signUpNav.css';
 
 const SignUpNav = () => {

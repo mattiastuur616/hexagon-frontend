@@ -2,7 +2,7 @@ import axios from 'axios';
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import hexLogo from '../../assets/HexLogo.png';
+import hexLogo from '../../assets/tuurstoriescommunity_hexlogo.png';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import './navbar.css';
 
