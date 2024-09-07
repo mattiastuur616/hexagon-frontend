@@ -1,6 +1,5 @@
 import { Brand, Navbar } from '..';
 import React, { useEffect } from 'react';
-import background from '../../assets/HexRings.png';
 import LoggedInNav from '../loggedInNav/LoggedInNav';
 import { Footer, WhatHex, Header } from '../../containers';
 import './mainPage.css';
@@ -20,10 +19,7 @@ const MainPage = () => {
             <Header />
           </div>
 
-          <div style={{backgroundImage: `url(${background})`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: 1520
-            }}>
+          <div className="about_hexagon">
             <WhatHex />
           </div>
 
@@ -41,10 +37,7 @@ const MainPage = () => {
             <Header />
           </div>
 
-          <div style={{backgroundImage: `url(${background})`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: 1520
-            }}>
+          <div className="about_hexagon">
             <WhatHex />
           </div>
           

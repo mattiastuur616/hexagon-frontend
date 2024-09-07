@@ -4,3 +4,4 @@ export { default as Brand } from './brand/Brand';
 export { default as Banner } from './banner/Banner';
 export { default as Navbar } from './navbar/Navbar';
 export { default as Product } from './product/Product';
+export { default as BooksSectionBox } from './boxes/BooksSectionBox';

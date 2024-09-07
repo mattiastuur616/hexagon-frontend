@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import SignUpNav from '../signUp/navbar/SignUpNav';
 import SignUpForm from '../signUp/form/SignUpForm';
-import background from '../../assets/signUp/signUpPic.png';
+import './mainPage.css';
 
 const SignUp = () => {
 
@@ -10,10 +10,7 @@ const SignUp = () => {
   })
 
   return (
-    <div style={{backgroundImage: `url(${background})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: 1540
-        }}>
+    <div className='sign_up_form'>
       <SignUpNav />
     <SignUpForm />
     </div>
