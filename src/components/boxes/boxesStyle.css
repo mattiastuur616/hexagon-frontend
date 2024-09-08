@@ -1,13 +1,13 @@
-.books_section {
+.books_section, .questions_section, .card_game_section {
     display: flex;
     flex-direction: column;
 
-    height: 25rem;
-    width: 27rem;
+    height: 32rem;
+    width: 30rem;
 }
 
-.books_section-text {
-    color: greenyellow;
+.books_section-text, .questions_section-text, .card_game_section-text {
+    color: rgb(255, 251, 0);
 
     font-size: 24px;
     font-weight: 800;
@@ -15,9 +15,15 @@
 
     text-align: center;
 
-    margin-top: 1rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 
     line-height: 45px;
+}
+
+.books_section-text {
+    margin-bottom: 2rem;
 }
 
 .books_section-nav {
@@ -32,6 +38,49 @@
     flex-direction: column;
 }
 
+.card_game_section-archive_buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.card_game_section-archive_button {
+    color: #8d00eb;
+    background: #fff700;
+
+    font-size: 20px;
+    font-weight: 700;
+    font-family: var(--font-family);
+
+    margin-left: 40%;
+    margin-right: 40%;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+
+    border: none;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+}
+
+.card_game_section-game_button {
+    color: #8d00eb;
+    background: #fff700;
+
+    font-size: 20px;
+    font-weight: 700;
+    font-family: var(--font-family);
+
+    margin-top: 1rem;
+    margin-left: 30%;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+
+    border: none;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+}
+
 .books_section-nav_buttons-button {
     color: #8d00eb;
     background: #fff700;
@@ -41,12 +90,33 @@
     font-family: var(--font-family);
     
     margin-bottom: 3rem;
-    margin-left: 1rem;
+    margin-left: 2.5rem;
     margin-right: 1rem;
     padding: 0.5rem 1rem;
     min-width: 150px;
     line-height: 30px;
     border-radius: 2rem;
+
+    border: none;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+}
+
+.questions_section-button {
+    color: #8d00eb;
+    background: #fff700;
+
+    font-size: 20px;
+    font-weight: 700;
+    font-family: var(--font-family);
+    
+    padding: 0.5rem 1rem;
+    min-width: 150px;
+    line-height: 30px;
+    border-radius: 2rem;
+
+    margin-left: 14%;
 
     border: none;
     cursor: pointer;
@@ -61,15 +131,16 @@
     margin-left: 1rem;
 }
 
-.questions_section {
-    display: flex;
-    flex-direction: column;
+.questions_section-img img {
+    width: 22rem;
+    height: 12rem;
 
-    height: 25rem;
-    width: 27rem;
+    margin-left: 4rem;
 }
 
-.questions_section-img img {
-    width: 12rem;
-    height: 6rem;
+.card_game_section-img img {
+    width: 15rem;
+    height: 15rem;
+
+    margin-left: 22%;
 }

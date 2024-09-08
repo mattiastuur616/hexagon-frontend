@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { BooksSectionBox } from '../../components';
 import './cta.css';
 import QuestionsBox from '../boxes/QuestionsBox';
+import CardGameSectionBox from '../boxes/CardGameSectionBox';
 
 const CTA = () => {
   const navigate = useNavigate()
@@ -16,12 +17,15 @@ const CTA = () => {
   function ShowCorrectBar() {
     if (localStorage.getItem("user") !== null) {
       return (
-        <div className="hex__cta">
-          <div>
+        <div className='hex__cta-selections'>
+          <div className='hex__cta-section'>
             <BooksSectionBox />
           </div>
-          <div>
+          <div className='hex__cta-section'>
             <QuestionsBox />
+          </div>
+          <div className='hex__cta-section'>
+            <CardGameSectionBox />
           </div>
         </div>
       )

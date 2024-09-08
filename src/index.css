@@ -3,7 +3,7 @@
 :root {
   --font-family: 'Manrope', sans-serif;
 
-  --gradient-bar: linear-gradient(103.22deg, #ff0000 -13.86%, #420000 99.55%);
+  --gradient-bar: linear-gradient(103.22deg, #32005a -13.86%, #ffffff 99.55%);
   --gradient-text: linear-gradient(89.97deg, #fff700 1.84%, #de7cff 102.67%);
   --gradient-footer: linear-gradient(89.97deg, #ffe600 1.84%, #f500e8 102.67%);
   --gradient-store-bar: linear-gradient(103.22deg, #55ff00 -13.86%, #007a70 99.55%);
